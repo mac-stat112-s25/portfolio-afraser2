@@ -9,8 +9,6 @@ library(leaflet)
 Use this file for practice with the **spatial viz** in-class activity.  Refer to the class website for details.
 ## Exercises
 
-{{< include activity-instructions.qmd >}}
-
 ### Preview
 
 You'll explore some R spatial viz tools below.
@@ -281,7 +279,7 @@ ggplot(world_boundaries) +
 
 Summarize what you learned about Starbucks from this map.
 
-+ <span style="color:red"> There is the highest density of starbucks in the US and nearby countries, as well as in Europe and far eastern Asia. There are a few Starbucks scatters around Russia and spreading into more western east asia. </span>
++ <span style="color:red"> There is the highest density of Starbucks in the US and nearby countries, as well as in Europe and far eastern Asia. There are a few Starbucks scatters around Russia and spreading into more western east asia. </span>
 
 ### Exercise 5: Zooming in on some countries {.unnumbered}
 
@@ -382,11 +380,11 @@ ggplot(midwest_boundaries) +
    geom_point(
      data = starbucks_midwest,
      aes(x = Longitude, y = Latitude),
-#     alpha = 0.7,
-#     size = 0.2, 
-#     color = 'darkgreen'
-#   ) + 
-#   theme_map()
+     alpha = 0.7,
+     size = 0.2, 
+     color = 'darkgreen'
+   ) + 
+   theme_map()
 ```
 
 ### Exercise 7: Contour maps {.unnumbered}
@@ -545,7 +543,7 @@ ggplot(elections_by_state, aes(map_id = state_name, fill = repub_20_categories))
 We can add other layers, like points, on top of a choropleth map.
 Add a Starbucks layer!
 Do you notice any relationship between Starbucks and elections?
-Or are we just doing things at this point?
+Or are we just doing things at this point? It seems like there are more Starbucks in less republican areas, but maybe that;s a coincidence
 ;)
 
 ```{r}
@@ -578,7 +576,7 @@ ggplot(elections_by_state, aes(map_id = state_name, fill = repub_20_categories))
 #### Part d {.unnumbered}
 
 We used `geom_sf()` for point maps.
-What `geom` do we use for choropleth maps?
+What `geom` do we use for choropleth maps? geom_point
 
 ### Exercise 9: County-level choropleth maps {.unnumbered}
 
@@ -642,6 +640,24 @@ ggplot(elections_by_counties, aes(map_id = county_fips, fill = repub_20_categori
 
 Construct county-level maps of `median_rent` and `median_age`.
 
+```{r}
+elections_by_counties <- elections_by_counties |> 
+  select(state_name, state_abbr, county_name, county_fips,
+          repub_pct_20, median_age, median_rent) |> 
+  mutate(rent_categories = 
+           cut(median_rent, 
+               breaks = seq(0, 1660, by = 160),
+               include.lowest = TRUE))
+
+ggplot(elections_by_counties, aes(map_id = county_fips, fill = rent_categories)) +
+  geom_map(map = county_map) +
+  scale_fill_manual(values = rev(brewer.pal(10, "RdBu")), name = "% Republican") +
+  expand_limits(x = county_map$long, y = county_map$lat) +
+  theme_map() +
+  theme(legend.position = "right") + 
+  coord_equal()
+```
+
 ### Exercise 11: Choropleth maps with leaflet {.unnumbered}
 
 Though `ggplot()` is often better for this purpose, we can also make choropleth maps with `leaflet()`.
@@ -649,220 +665,3 @@ If you're curious, check out the `leaflet` documentation:
 
 <https://rstudio.github.io/leaflet/choropleths.html>
 
-## Solutions
-
-<details>
-
-<summary>Click for Solutions</summary>
-
-### Example 1 {.unnumbered}
-
-Both addresses used between 0 and 450 therms per month.
-There seem to be two types of months -- those with lower use around 50 therms and those with higher use around 300/400 therms.
-
-```{r}
-ggplot(energy, aes(x = therms, fill = address)) + 
-  geom_density(alpha = 0.5)
-```
-
-### Example 2 {.unnumbered}
-
-Energy use is seasonal, with higher usage in winter months.
-It seems that address a uses slightly more energy.
-
-```{r}
-ggplot(energy, aes(y = therms, x = date, color = address)) + 
-  geom_point()
-ggplot(energy, aes(y = therms, x = date, color = address)) + 
-  geom_line()
-```
-
-### Example 3 {.unnumbered}
-
-At both addresses, typical energy use *increased* after renovations.
-
-```{r}
-ggplot(energy, aes(y = therms, x = renovated)) + 
-  geom_boxplot() + 
-  facet_wrap(~ address)
-
-# A density plot isn't very helpful for comparing typical therms in this example!
-ggplot(energy, aes(x = therms, fill = renovated)) + 
-  geom_density(alpha = 0.5) + 
-  facet_wrap(~ address)
-```
-
-### Example 4 {.unnumbered}
-
-lurking variable = outdoor temperature (as reflected by hdd)
-
-```{r}
-# It happened to be colder outside after renovations (higher hdd)
-ggplot(energy, aes(y = hdd, x = renovated)) + 
-  geom_boxplot() + 
-  facet_wrap(~ address)
-
-# When controlling for outside temps (via hdd), energy use decreased post-renovation
-ggplot(energy, aes(y = therms, x = hdd, color = renovated)) + 
-  geom_point(alpha = 0.5) + 
-  geom_smooth(method = "lm", se = FALSE) + 
-  facet_wrap(~ address)
-```
-
-### Example 5 {.unnumbered}
-
-BUT this was explained by a *confounding* or *omitted* or *lurking* variable: `hdd` (outdoor temperature)
-
--   After renovation...
--   *it happened to be colder*...
--   which then leads to higher energy use.
-
-Thus, *when controlling for* outdoor temps, renovations led to *decreased* energy use.
-
-### Exercise 3: Your turn {.unnumbered}
-
-```{r}
-leaflet(data = starbucks_mn) |> 
-  addTiles() |> 
-  addMarkers()
-```
-
-### Exercise 3: A simple scatterplot {.unnumbered}
-
-It would be nice to also have some actual reference maps of countries in the background.
-
-```{r}
-ggplot(starbucks, aes(y = Latitude, x = Longitude)) + 
-  geom_point(size = 0.5)
-```
-
-### Exercise 6: A state and county-level map {.unnumbered}
-
-#### Part b {.unnumbered}
-
-Adjust the code below to make the plot!
-Remove the `#` to run it.
-
-```{r}
-ggplot(midwest_boundaries) +
-  geom_sf() +
-  geom_point(
-    data = starbucks_midwest,
-    aes(x = Longitude, y = Latitude),
-    alpha = 0.7,
-    size = 0.2,
-    color = 'darkgreen'
-  ) +
-  theme_map()
-```
-
-### Exercise 7: Contour maps {.unnumbered}
-
-Especially when there are lots of point locations, and those locations start overlapping on a map, it can be tough to visualize areas of higher *density*.
-Consider the Starbucks locations in Canada, Mexico, and the US that we mapped earlier:
-
-```{r}
-# Point map (we made this earlier)
-ggplot(cma_boundaries) + 
-  geom_sf() + 
-  geom_point(
-    data = starbucks_cma,
-    aes(x = Longitude, y = Latitude),
-    alpha = 0.3,
-    size = 0.2,
-    color = "darkgreen"
-  ) +
-  coord_sf(xlim = c(-179.14, -50), ylim = c(14.54, 83.11)) +
-  theme_map()
-```
-
-Now check out the contour map.
-
-```{r}
-# What changed in the plot?
-# What changed in our code?!
-ggplot(cma_boundaries) + 
-  geom_sf() + 
-  geom_density_2d(
-    data = starbucks_cma,
-    aes(x = Longitude, y = Latitude),
-    size = 0.2,
-    color = "darkgreen"
-  ) +
-  coord_sf(xlim = c(-179.14, -50), ylim = c(14.54, 83.11)) +
-  theme_map()
-```
-
-### Exercises Part 3: Choropleth maps {.unnumbered}
-
-Spatial data isn't always in the form of point locations!
-For example, recall the state and county-level data on presidential elections.
-
-```{r}
-elections_by_state <-  read.csv("https://mac-stat.github.io/data/election_2020_by_state.csv")
-elections_by_counties <- read.csv("https://mac-stat.github.io/data/election_2020_county.csv")
-```
-
-In these datasets, we're interested in the overall election outcome by region (state or county), not the specific geographic location of some observation.
-Let's wrangle our data first.
-
-We'll focus on just a few variables of interest, and create a new variable (`repub_20_categories`) that *discretizes* the `repub_pct_20` variable into increments of 5 percentage points (for states) or 10 percentage points (for counties):
-
-```{r}
-# Don't worry about the code!
-
-elections_by_state <- elections_by_state |> 
-  filter(state_abbr != "DC") |> 
-  select(state_name, state_abbr, repub_pct_20) |> 
-  mutate(repub_20_categories = 
-           cut(repub_pct_20, 
-               breaks = seq(30, 70, by = 5), 
-               labels = c("30-34", "35-39", "40-44", "45-49",
-                          "50-54", "55-59", "60-64", "65-70"), 
-               include.lowest = TRUE))
-
-elections_by_counties <- elections_by_counties |> 
-  select(state_name, state_abbr, county_name, county_fips,
-          repub_pct_20, median_age, median_rent) |> 
-  mutate(repub_20_categories = 
-           cut(repub_pct_20, 
-               breaks = seq(0, 100, by = 10),
-               labels = c("0-9", "10-19", "20-29", "30-39", "40-49",
-                          "50-59", "60-69", "70-79", "80-89", "90-100"),
-               include.lowest = TRUE))
-
-# Add 0's at the beginning of any fips_code that's fewer than 5 numbers long
-# Don't worry about the syntax
-elections_by_counties <- elections_by_counties |> 
-  mutate(county_fips = as.character(county_fips)) |> 
-  mutate(county_fips = 
-           ifelse(nchar(county_fips) == 4, paste0("0", county_fips), county_fips))
-```
-
-### Exercise 8: State-level choropleth maps {.unnumbered}
-
-#### Part d {.unnumbered}
-
-`geom_map()`
-
-### Exercise 10: Play around! {.unnumbered}
-
-```{r}
-ggplot(elections_by_counties, aes(map_id = county_fips, fill = median_rent)) +
-  geom_map(map = county_map) +
-  expand_limits(x = county_map$long, y = county_map$lat) +
-  theme_map() +
-  theme(legend.position = "right") + 
-  coord_equal() + 
-  scale_fill_gradientn(name = "median rent", colors = c("white", "lightgreen", "darkgreen"))
-
-ggplot(elections_by_counties, aes(map_id = county_fips, fill = median_age)) +
-  geom_map(map = county_map) +
-  expand_limits(x = county_map$long, y = county_map$lat) +
-  theme_map() +
-  theme(legend.position = "right") + 
-  coord_equal() + 
-  scale_fill_gradientn(name = "median age", colors = terrain.colors(10))
-```
-
-</details>
