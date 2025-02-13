@@ -139,7 +139,7 @@ We can change all sorts of details in leaflet maps.
 library(gplots)
 
 # We can add colored circles instead of markers at each location
-leaflet(data = fave_places) |> 
+leaflet(data = fave_places) %>%
   addTiles() |> 
   addCircles(color = col2hex("red"))
 ```
@@ -651,7 +651,7 @@ elections_by_counties <- elections_by_counties |>
 
 ggplot(elections_by_counties, aes(map_id = county_fips, fill = rent_categories)) +
   geom_map(map = county_map) +
-  scale_fill_manual(values = rev(brewer.pal(10, "RdBu")), name = "% Republican") +
+  scale_fill_manual(values = rev(brewer.pal(10, "RdBu")), name = "Median Rent Category") +
   expand_limits(x = county_map$long, y = county_map$lat) +
   theme_map() +
   theme(legend.position = "right") + 
