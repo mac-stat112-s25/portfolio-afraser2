@@ -24,6 +24,10 @@ world_boundaries <- ne_countries(returnclass = "sf")
 starbucks_cma <- starbucks |> 
   filter(Country %in% c('CA', 'MX', 'US'))
 
+cma_boundaries <- ne_states(
+  country = c("canada", "mexico", "united states of america"),
+  returnclass = "sf")
+
 # Add the points
 # And zoom in
 ggplot(cma_boundaries) + 
