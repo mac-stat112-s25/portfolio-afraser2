@@ -1,5 +1,42 @@
 ---
-title: "Quadvariate Viz"
+title: "Quadvariate (Multivariate) Viz"
 ---
 
-Use this file to generate a professional looking **quadvariate** visualization.  The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.
+```{r}
+#Load data
+education <- read.csv("https://mac-stat.github.io/data/sat.csv")
+
+# Load libraries
+library(ggplot2)
+library(viridis)
+library(viridisLite)
+library(tibble)
+library(gplots)
+```
+
+```{r, fig.width = 8, fig.height = 15}
+
+# Remove the "State" column and use it to label the rows
+# Then scale the variables
+plot_data <- education |> 
+  column_to_rownames("State") |> 
+  data.matrix() |> 
+  scale()
+
+# Construct the heatmap
+heatmap.2(plot_data,
+  dendrogram = "none",
+  Rowv = TRUE,            
+  scale = "column",
+  keysize = 0.7, 
+  density.info = "none",
+  col = hcl.colors(256), 
+  margins = c(10, 20),
+  colsep = c(1:7), rowsep = (1:50), sepwidth = c(0.05, 0.05),
+  sepcolor = "white", trace = "none",
+  main = "SAT data heatmap in 1994-95",
+  alt = "A heatmap titled 'SAT data heatmap in 1995-95' which lists the states along the x-axis and 'frac, fracCat, expend, salary, ratio, verbal, sat, and math' as variables along the x axis. The colors represent the Z-score of each variable for each state. Particular areas with high Z scores are the expenditure variable for New York and New Jersey, and the ratio variable for Utah and Californa."
+)
+```
+
+Although this plot has many more than four variables, I chose it to be in my best work folder because it does a very good job showing areas of outliers and to which attention should be paid for many continuous numerical variables. This heat map does require some knowledge of the x axis titles, as well as an understanding that Z-score is the distance of a value from data points of the same parameter. I wish I knew how to change the x-axis titles to be more accessible, but the color palette in existence is accessible from a physical point of view, as it is high contrast. From looking at this graph we can clearly see the `ratio` variable (ratio of pupils to teacher) is an outlier in Utah and California, and New York and New Jersey have particularly high `expend` (education expenditure per student). 
