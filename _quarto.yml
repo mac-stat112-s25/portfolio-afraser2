@@ -39,6 +39,7 @@ book:
       - ica/ica-spatial.qmd
       - ica/ica-effective.qmd
       - ica/quarto-demo.qmd
+      - ica/dates.qmd
      
 
 format:
