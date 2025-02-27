@@ -135,7 +135,7 @@ penguins_noyear_nolocation <- penguins |>
   select(-island, -year)
 
 head(penguins)
-head(penguins_year_location)
+head(penguins_noyear_nolocation)
 
 ```
 
