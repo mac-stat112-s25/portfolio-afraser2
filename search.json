@@ -252,91 +252,113 @@
     ]
   },
   {
-    "objectID": "ica/quarto-demo.html",
-    "href": "ica/quarto-demo.html",
-    "title": "\n13  My first Quarto document\n",
+    "objectID": "ica/ica-reshaping.html",
+    "href": "ica/ica-reshaping.html",
+    "title": "\n13  Reshaping\n",
     "section": "",
-    "text": "13.1 Intro\nMacalester College is in the Twin Cities. It has:\nCheck it out for yourself:",
+    "text": "Exercise 1: What’s the problem?\nConsider data on a sleep study in which subjects received only 3 hours of sleep per night. Each day, their reaction time to a stimulus (in ms) was recorded.1\nsleep_wide &lt;- read.csv(\"https://mac-stat.github.io/data/sleep_wide.csv\")\n\nhead(sleep_wide)\n\n  Subject  day_0  day_1  day_2  day_3  day_4  day_5  day_6  day_7  day_8  day_9\n1     308 249.56 258.70 250.80 321.44 356.85 414.69 382.20 290.15 430.59 466.35\n2     309 222.73 205.27 202.98 204.71 207.72 215.96 213.63 217.73 224.30 237.31\n3     310 199.05 194.33 234.32 232.84 229.31 220.46 235.42 255.75 261.01 247.52\n4     330 321.54 300.40 283.86 285.13 285.80 297.59 280.24 318.26 305.35 354.05\n5     331 287.61 285.00 301.82 320.12 316.28 293.32 290.08 334.82 293.75 371.58\n6     332 234.86 242.81 272.96 309.77 317.46 310.00 454.16 346.83 330.30 253.86",
     "crumbs": [
       "In-class Activities",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>My first Quarto document</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Reshaping</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-reshaping.html#footnotes",
+    "href": "ica/ica-reshaping.html#footnotes",
+    "title": "\n13  Reshaping\n",
+    "section": "",
+    "text": "Gregory Belenky, Nancy J. Wesensten, David R. Thorne, Maria L. Thomas, Helen C. Sing, Daniel P. Redmond, Michael B. Russo and Thomas J. Balkin (2003) Patterns of performance degradation and restoration during sleep restriction and subsequent recovery: a sleep dose-response study. Journal of Sleep Research 12, 1–12.↩︎",
+    "crumbs": [
+      "In-class Activities",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Reshaping</span>"
+    ]
+  },
+  {
+    "objectID": "ica/quarto-demo.html",
+    "href": "ica/quarto-demo.html",
+    "title": "\n14  My first Quarto document\n",
+    "section": "",
+    "text": "14.1 Intro\nMacalester College is in the Twin Cities. It has:\nCheck it out for yourself:",
+    "crumbs": [
+      "In-class Activities",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>My first Quarto document</span>"
     ]
   },
   {
     "objectID": "ica/quarto-demo.html#intro",
     "href": "ica/quarto-demo.html#intro",
-    "title": "\n13  My first Quarto document\n",
+    "title": "\n14  My first Quarto document\n",
     "section": "",
     "text": "four seasons\nbagpipes\ndelightful students",
     "crumbs": [
       "In-class Activities",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>My first Quarto document</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>My first Quarto document</span>"
     ]
   },
   {
     "objectID": "ica/quarto-demo.html#exercise-1-deduce-quarto-features",
     "href": "ica/quarto-demo.html#exercise-1-deduce-quarto-features",
-    "title": "\n13  My first Quarto document\n",
-    "section": "\n13.2 Exercise 1: Deduce Quarto features",
-    "text": "13.2 Exercise 1: Deduce Quarto features\nCheck out the appearance and contents of this document. Thoughts?\nIn the toolbar at the top of this document, Render the .qmd file into a .html file. Where is this file stored? Thoughts about its appearance / contents? Can you edit it?\nThis file is stored in my repository initially created for class, and renders into html, where I cannot edit it.\nToggling between the .qmd and .html files, explain the purpose of the following features in the .qmd file:\n*\n**\n#\n-\n\\\n![](url)\nThese features appear to make things bold",
+    "title": "\n14  My first Quarto document\n",
+    "section": "\n14.2 Exercise 1: Deduce Quarto features",
+    "text": "14.2 Exercise 1: Deduce Quarto features\nCheck out the appearance and contents of this document. Thoughts?\nIn the toolbar at the top of this document, Render the .qmd file into a .html file. Where is this file stored? Thoughts about its appearance / contents? Can you edit it?\nThis file is stored in my repository initially created for class, and renders into html, where I cannot edit it.\nToggling between the .qmd and .html files, explain the purpose of the following features in the .qmd file:\n*\n**\n#\n-\n\\\n![](url)\nThese features appear to make things bold",
     "crumbs": [
       "In-class Activities",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>My first Quarto document</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>My first Quarto document</span>"
     ]
   },
   {
     "objectID": "ica/quarto-demo.html#exercise-2-code",
     "href": "ica/quarto-demo.html#exercise-2-code",
-    "title": "\n13  My first Quarto document\n",
-    "section": "\n13.3 Exercise 2: Code",
-    "text": "13.3 Exercise 2: Code\nHow does this appear in the .qmd? The .html? So…?!\nseq(from = 100, to = 1000, by = 50)\nThey look the same and it’s not doing the sequence command. It is simply showing these sequence of characters as a text string.",
+    "title": "\n14  My first Quarto document\n",
+    "section": "\n14.3 Exercise 2: Code",
+    "text": "14.3 Exercise 2: Code\nHow does this appear in the .qmd? The .html? So…?!\nseq(from = 100, to = 1000, by = 50)\nThey look the same and it’s not doing the sequence command. It is simply showing these sequence of characters as a text string.",
     "crumbs": [
       "In-class Activities",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>My first Quarto document</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>My first Quarto document</span>"
     ]
   },
   {
     "objectID": "ica/quarto-demo.html#exercise-3-chunks",
     "href": "ica/quarto-demo.html#exercise-3-chunks",
-    "title": "\n13  My first Quarto document\n",
-    "section": "\n13.4 Exercise 3: Chunks",
-    "text": "13.4 Exercise 3: Chunks\nQuarto isn’t a mind reader – we must distinguish R code from text. We do so by putting code inside an R chunk:\n\nseq(from = 100, to = 1000, by = 50)\n\n [1]  100  150  200  250  300  350  400  450  500  550  600  650  700  750  800\n[16]  850  900  950 1000\n\n\n\nPut the seq() code in the chunk.\nPress the green arrow in the top right of the chunk. What happens in the qmd? The qmd shows the processed results of the code.\nRender. What appears in the html: R code, output, or both? The R code and the output both show up when you render the file, but with slightly different formating than in the qmd",
+    "title": "\n14  My first Quarto document\n",
+    "section": "\n14.4 Exercise 3: Chunks",
+    "text": "14.4 Exercise 3: Chunks\nQuarto isn’t a mind reader – we must distinguish R code from text. We do so by putting code inside an R chunk:\n\nseq(from = 100, to = 1000, by = 50)\n\n [1]  100  150  200  250  300  350  400  450  500  550  600  650  700  750  800\n[16]  850  900  950 1000\n\n\n\nPut the seq() code in the chunk.\nPress the green arrow in the top right of the chunk. What happens in the qmd? The qmd shows the processed results of the code.\nRender. What appears in the html: R code, output, or both? The R code and the output both show up when you render the file, but with slightly different formating than in the qmd",
     "crumbs": [
       "In-class Activities",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>My first Quarto document</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>My first Quarto document</span>"
     ]
   },
   {
     "objectID": "ica/quarto-demo.html#exercise-4-practice",
     "href": "ica/quarto-demo.html#exercise-4-practice",
-    "title": "\n13  My first Quarto document\n",
-    "section": "\n13.5 Exercise 4: Practice",
-    "text": "13.5 Exercise 4: Practice\n\nUse R code to create the following sequence: 10 10 10 10\nStore the sequence as four_tens.\nUse an R function (which we haven’t learned!) to add up the numbers in four_tens.\n\n\nfour_tens &lt;- rep(10,4)\nsum(four_tens)\n\n[1] 40",
+    "title": "\n14  My first Quarto document\n",
+    "section": "\n14.5 Exercise 4: Practice",
+    "text": "14.5 Exercise 4: Practice\n\nUse R code to create the following sequence: 10 10 10 10\nStore the sequence as four_tens.\nUse an R function (which we haven’t learned!) to add up the numbers in four_tens.\n\n\nfour_tens &lt;- rep(10,4)\nsum(four_tens)\n\n[1] 40",
     "crumbs": [
       "In-class Activities",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>My first Quarto document</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>My first Quarto document</span>"
     ]
   },
   {
     "objectID": "ica/quarto-demo.html#exercise-5-fix-this-code",
     "href": "ica/quarto-demo.html#exercise-5-fix-this-code",
-    "title": "\n13  My first Quarto document\n",
-    "section": "\n13.6 Exercise 5: Fix this code",
-    "text": "13.6 Exercise 5: Fix this code\nCode is a form of communication, and the code below doesn’t cut it.\nPut the code in a chunk and fix it.\n\nrep(x = 1, times = 10)\n\n [1] 1 1 1 1 1 1 1 1 1 1\n\nseq(from = 100, to = 1000, length = 20)\n\n [1]  100.0000  147.3684  194.7368  242.1053  289.4737  336.8421  384.2105\n [8]  431.5789  478.9474  526.3158  573.6842  621.0526  668.4211  715.7895\n[15]  763.1579  810.5263  857.8947  905.2632  952.6316 1000.0000\n\nnumber_of_students&lt;-27",
+    "title": "\n14  My first Quarto document\n",
+    "section": "\n14.6 Exercise 5: Fix this code",
+    "text": "14.6 Exercise 5: Fix this code\nCode is a form of communication, and the code below doesn’t cut it.\nPut the code in a chunk and fix it.\n\nrep(x = 1, times = 10)\n\n [1] 1 1 1 1 1 1 1 1 1 1\n\nseq(from = 100, to = 1000, length = 20)\n\n [1]  100.0000  147.3684  194.7368  242.1053  289.4737  336.8421  384.2105\n [8]  431.5789  478.9474  526.3158  573.6842  621.0526  668.4211  715.7895\n[15]  763.1579  810.5263  857.8947  905.2632  952.6316 1000.0000\n\nnumber_of_students&lt;-27",
     "crumbs": [
       "In-class Activities",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>My first Quarto document</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>My first Quarto document</span>"
     ]
   },
   {
     "objectID": "ica/quarto-demo.html#exercise-6-comments",
     "href": "ica/quarto-demo.html#exercise-6-comments",
-    "title": "\n13  My first Quarto document\n",
-    "section": "\n13.7 Exercise 6: Comments",
-    "text": "13.7 Exercise 6: Comments\nRun the chunk below. Notice that R ignores anything in a line starting with a pound sign (#). If we took the # away we’d get an error!\n\n# This is a comment\n4 + 5\n\n[1] 9\n\n\nWe’ll utilize this feature to comment our code, i.e. leave short notes about what our code is doing. Below, replace the ??? with an appropriate comment.\n\n# This code calculates what 10 degrees celcius is in fahrenheit\ntemperature_c &lt;- 10\ntemperature_f &lt;- temperature_c * 9/5 + 32\ntemperature_f\n\n[1] 50",
+    "title": "\n14  My first Quarto document\n",
+    "section": "\n14.7 Exercise 6: Comments",
+    "text": "14.7 Exercise 6: Comments\nRun the chunk below. Notice that R ignores anything in a line starting with a pound sign (#). If we took the # away we’d get an error!\n\n# This is a comment\n4 + 5\n\n[1] 9\n\n\nWe’ll utilize this feature to comment our code, i.e. leave short notes about what our code is doing. Below, replace the ??? with an appropriate comment.\n\n# This code calculates what 10 degrees celcius is in fahrenheit\ntemperature_c &lt;- 10\ntemperature_f &lt;- temperature_c * 9/5 + 32\ntemperature_f\n\n[1] 50",
     "crumbs": [
       "In-class Activities",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>My first Quarto document</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>My first Quarto document</span>"
     ]
   }
 ]
