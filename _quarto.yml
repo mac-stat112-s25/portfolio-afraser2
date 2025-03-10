@@ -44,6 +44,7 @@ book:
       - ica/ica-reshaping.qmd
       - ica/ica-joining.qmd
       - ica/quarto-demo.qmd
+      - ica/ica-factors.qmd
 
      
 
