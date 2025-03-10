@@ -1,0 +1,17 @@
+---
+title: "Exam 1 Summary Sheet"
+format: html
+---
+
+```{r, fig.height = 9}
+library(grid)
+
+img <- png::readPNG("C:/Users/frase/OneDrive/Documents/School Stuff/Exam1CheatSheetPNG.png")
+grid.raster(img, height = unit(1, "npc"))
+```
+
+
+Above is my cheatsheet summary of visualizations from all visualization units in this class.
+
+
+

@@ -11,8 +11,6 @@ library(ggridges)
 
 ## Exercises
 
-{{< include activity-instructions.qmd >}}
-
 The exercises revisit our `grades` data:
 
 ```{r}

@@ -31,6 +31,7 @@ book:
       - bw/bw-quad.qmd
       - bw/bw-spatial.qmd
       - bw/bw-exam1.qmd
+      - bw/bw-exam1-cheatsheet.qmd
 
     - part: "In-class Activities"
       chapters: 
@@ -43,8 +44,9 @@ book:
       - ica/ica-dates.qmd
       - ica/ica-reshaping.qmd
       - ica/ica-joining.qmd
-      - ica/quarto-demo.qmd
       - ica/ica-factors.qmd
+      - ica/quarto-demo.qmd
+
 
      
 
