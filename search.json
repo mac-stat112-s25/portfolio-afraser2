@@ -459,5 +459,27 @@
       "In-class Activities",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>My first Quarto document</span>"
     ]
+  },
+  {
+    "objectID": "ica/ica-factors.html",
+    "href": "ica/ica-factors.html",
+    "title": "\n17  Factors\n",
+    "section": "",
+    "text": "17.1 Exercises\nThe exercises revisit our grades data:\n# Get rid of some duplicate rows!\ngrades &lt;- read.csv(\"https://mac-stat.github.io/data/grades.csv\") |&gt; \n  distinct(sid, sessionID, .keep_all = TRUE)\n\n# Check it out\nhead(grades)\n\n     sid grade   sessionID\n1 S31185    D+ session1784\n2 S31185    B+ session1785\n3 S31185    A- session1791\n4 S31185    B+ session1792\n5 S31185    B- session1794\n6 S31185    C+ session1795\nWe’ll explore the number of times each grade was assigned:\ngrade_distribution &lt;- grades |&gt; \n  count(grade)\n\nhead(grade_distribution)\n\n  grade    n\n1     A 1506\n2    A- 1381\n3    AU   27\n4     B  804\n5    B+ 1003\n6    B-  330",
+    "crumbs": [
+      "In-class Activities",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Factors</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-factors.html#exercises",
+    "href": "ica/ica-factors.html#exercises",
+    "title": "\n17  Factors\n",
+    "section": "",
+    "text": "Exercise 1: Changing Order\nCheck out a column plot of the number of times each grade was assigned during the study period. This is similar to a bar plot, but where we define the height of a bar according to variable in our dataset.\n\ngrade_distribution |&gt; \n  ggplot(aes(x = grade, y = n)) +\n    geom_col()\n\n\n\n\n\n\n\nThe order of the grades is goofy! Construct a new column plot, manually reordering the grades from high (A) to low (NC) with “S” and “AU” at the end:\n\ngrade_distribution |&gt;\n  mutate(grade = fct_relevel(grade, c(\"A\", \"A-\", \"B+\", \"B\", \"B-\", \"C+\", \"C\", \"C-\", \"D+\", \"D\", \"D-\", \"NC\", \"S\", \"AU\"))) |&gt;\n  ggplot(aes(x = grade, y = n)) +\n    geom_col()\n\n\n\n\n\n\n\nConstruct a new column plot, reordering the grades in ascending frequency (i.e. how often the grades were assigned):\n\ngrade_distribution |&gt;\n  mutate(grade = fct_reorder(grade, n)) |&gt;\n  ggplot(aes(x = grade, y = n)) +\n    geom_col()\n\n\n\n\n\n\n\nConstruct a new column plot, reordering the grades in descending frequency (i.e. how often the grades were assigned):\n\ngrade_distribution |&gt;\n  mutate(grade = fct_reorder(grade, n, .desc = TRUE)) |&gt;\n  ggplot(aes(x = grade, y = n)) +\n    geom_col()\n\n\n\n\n\n\n\nExercise 2: Changing Factor Level Labels\nIt may not be clear what “AU” and “S” stand for. Construct a new column plot that renames these levels “Audit” and “Satisfactory”, while keeping the other grade labels the same and in a meaningful order:\n\ngrade_distribution |&gt;\n  mutate(grade = fct_relevel(grade, c(\"A\", \"A-\", \"B+\", \"B\", \"B-\", \"C+\", \"C\", \"C-\", \"D+\", \"D\", \"D-\", \"NC\", \"S\", \"AU\"))) |&gt;\n  mutate(grade = fct_recode(grade, \"Audit\" = \"AU\", \"Satisfactory\" = \"S\")) |&gt;  # Multiple pieces go into the last 2 blanks\n  ggplot(aes(x = grade, y = n)) +\n    geom_col()",
+    "crumbs": [
+      "In-class Activities",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Factors</span>"
+    ]
   }
 ]
