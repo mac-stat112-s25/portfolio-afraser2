@@ -172,7 +172,7 @@ ggplot(aes(x = dept, y = avg_percent_full)) +
 ```
 I am also curious about how many individual students each professor teaches each semester. The data does not show us students taking more than one class under the same professor, so we will have to assume that that does not happen when we conduct the analysis below.
 
-```{r fig.height=20 fig.width=4}
+```{r}
 #We are interested in the `instructor` and `enroll` variable in this section.
 
 enrollments |>
@@ -266,7 +266,7 @@ courses_w |>
 courses_w |>
   filter(time %in% c("6:30 - 10:00 pm", "6:45 - 8:15 pm", "7:00 - 10:00 pm", "7:00 - 8:00 pm", "7:00 - 8:30 pm", "7:00 - 9:00 pm", "7:15 - 8:45 pm")) |>
   ggplot(aes(x = days)) +
-  geom_bar(s)
+  geom_bar()
 
 
 ```
