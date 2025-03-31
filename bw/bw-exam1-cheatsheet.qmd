@@ -6,7 +6,7 @@ format: html
 ```{r, fig.height = 9}
 library(grid)
 
-img <- png::readPNG("C:/Users/frase/OneDrive/Documents/School Stuff/Exam1CheatSheetPNG.png")
+img <- png::readPNG("../exam1cheatsheet.png")
 grid.raster(img, height = unit(1, "npc"))
 ```
 

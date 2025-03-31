@@ -70,13 +70,76 @@ fc_mosteachcat |>
 ```
 
 Research Question 3: What does the consumption of each food look like?
+Visualization Try 1
+
+There are some names in this data set that do not match up with the names for those countries in the other data set. Therefore, the next step will be to correct that.
 ```{r}
 ne_countries(returnclass = "sf") |>
-  left_join(world_boundaries)
+  select(name, geometry) |>
+  left_join(fc |> select(-co2_emmission),
+            join_by(name == country)) |>
+  ggplot() +
+  geom_sf(aes(fill = consumption)) +
+  facet_wrap(~food_category) +
+  theme(legend.position = "bottom")
+
+```
+Question 3, Visualization Try 2
+
+This graph does a better job showing the country boundaries even for countries that we do not have consumption data for. It also has improved recognition of all country names between the data set. However, one problem remains, that milk still proportionally dominates the color representation of all food categories, and stops other food categories from being seen.
+```{r}
+ne_countries(returnclass = "sf") |>
+  select(name, geometry) |>
+  mutate(name = ifelse(name == "United States of America", "USA", name)) |>
+  mutate(name = ifelse(name == "Bosnia and Herz.", "Bosnia and Herzegovina", name)) |>
+  mutate(name = ifelse(name == "Czechia", "Czech Republic", name)) |>
+  mutate(name = ifelse(name == "Taiwan", "Taiwan. ROC", name)) |>
+  left_join(fc |> select(-co2_emmission),
+            join_by(name == country)) |>
+  pivot_wider(names_from = food_category,
+              values_from = consumption) |>
+  select(-"NA") |>
+  pivot_longer(cols = c(-name, -geometry),
+               names_to = "food_category",
+               values_to = "consumption") |>
+  ggplot() +
+  geom_sf(aes(fill = consumption)) +
+  facet_wrap(~food_category) +
+  theme(legend.position = "bottom")
 
 ```
 
+Question 3, Visualization Try 3
 
+In this visualization, we have modified the color scale to make sure the hotspots of each food category show up.
+```{r, fig.height = 6, fig.width = 10 }
+ne_countries(returnclass = "sf") |>
+  select(name, geometry) |>
+  mutate(name = ifelse(name == "United States of America", "USA", name)) |>
+  mutate(name = ifelse(name == "Bosnia and Herz.", "Bosnia and Herzegovina", name)) |>
+  mutate(name = ifelse(name == "Czechia", "Czech Republic", name)) |>
+  mutate(name = ifelse(name == "Taiwan", "Taiwan. ROC", name)) |>
+  left_join(
+    fc |>
+      select(-co2_emmission) |>
+      group_by(food_category) |>
+      mutate(consumption = (consumption - mean(consumption))/sd(consumption)),
+      join_by(name == country)) |>
+  pivot_wider(names_from = food_category,
+              values_from = consumption) |>
+  select(-"NA") |>
+  pivot_longer(cols = c(-name, -geometry),
+               names_to = "food_category",
+               values_to = "consumption") |>
+  ggplot() +
+  geom_sf(aes(fill = consumption)) +
+  facet_wrap(~food_category) +
+  theme(legend.position = "bottom")
+
+
+```
+
+Looking at the above visualization, we can make some statements to answer our third primary research question. Beef and poultry are mostly eaten in North and South America, lots of wheat is eaten in Russia and North Africa, and rice consumption is concentrated mostly in East Asian countries. We can see some general trends that are particularly apparent in larger countries in the above maps, but one problem is that the small scale of each map keeps us from seeing small countries' data points. One way we could overcome this in subsequent visualizations is to focus on only one food category so that the map visualization for that category is much bigger, and we can see how the outlines of smaller countries are filled in.
 
 
 
