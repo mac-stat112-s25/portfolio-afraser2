@@ -188,8 +188,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../bw/bw-exam1-cheatsheet.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Exam 1 Summary Sheet</span></span></a>
+  <a href="../bw/bw-exam2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Exam 2: Food Consumption 2</span></span></a>
   </div>
 </li>
       </ul>
@@ -277,6 +277,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Summaries</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../bw/bw-exam1-cheatsheet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Exam 1 Summary Sheet</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
     </ul>
 </div>
 </nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
@@ -324,15 +341,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Load tidyverse &amp; data</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">#Testing changes</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="co"># Load tidyverse &amp; data</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr     1.1.4     ✔ readr     2.1.5
 ✔ forcats   1.0.0     ✔ stringr   1.5.1
 ✔ ggplot2   3.5.1     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.0.4     
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()
@@ -2785,533 +2803,534 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb84-12"><a href="#cb84-12"></a><span class="ss">-   </span>Only keep the following variables: <span class="in">`state_name`</span>, <span class="in">`county_name`</span>, <span class="in">`total_votes_20`</span>, <span class="in">`repub_pct_20`</span>, <span class="in">`dem_pct_20`</span>, <span class="in">`total_votes_16`</span>, <span class="in">`dem_pct_16`</span></span>
 <span id="cb84-13"><a href="#cb84-13"></a></span>
 <span id="cb84-16"><a href="#cb84-16"></a><span class="in">```{r}</span></span>
-<span id="cb84-17"><a href="#cb84-17"></a><span class="co"># Load tidyverse &amp; data</span></span>
-<span id="cb84-18"><a href="#cb84-18"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb84-19"><a href="#cb84-19"></a>elections <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/election_2020_county.csv"</span>)</span>
-<span id="cb84-20"><a href="#cb84-20"></a></span>
+<span id="cb84-17"><a href="#cb84-17"></a><span class="co">#Testing changes</span></span>
+<span id="cb84-18"><a href="#cb84-18"></a><span class="co"># Load tidyverse &amp; data</span></span>
+<span id="cb84-19"><a href="#cb84-19"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb84-20"><a href="#cb84-20"></a>elections <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/election_2020_county.csv"</span>)</span>
 <span id="cb84-21"><a href="#cb84-21"></a></span>
-<span id="cb84-22"><a href="#cb84-22"></a><span class="co"># Define elections_small</span></span>
-<span id="cb84-23"><a href="#cb84-23"></a>elections_small <span class="ot">&lt;-</span> elections <span class="sc">|&gt;</span></span>
-<span id="cb84-24"><a href="#cb84-24"></a>  <span class="fu">select</span>(state_name, county_name, total_votes_20, repub_pct_20, dem_pct_20, total_votes_16, dem_pct_16)</span>
-<span id="cb84-25"><a href="#cb84-25"></a></span>
-<span id="cb84-26"><a href="#cb84-26"></a><span class="co"># Check out the first 6 rows to confirm your code did what you think it did!</span></span>
-<span id="cb84-27"><a href="#cb84-27"></a><span class="fu">head</span>(elections_small)</span>
-<span id="cb84-28"><a href="#cb84-28"></a></span>
-<span id="cb84-29"><a href="#cb84-29"></a><span class="in">```</span></span>
-<span id="cb84-30"><a href="#cb84-30"></a></span>
+<span id="cb84-22"><a href="#cb84-22"></a></span>
+<span id="cb84-23"><a href="#cb84-23"></a><span class="co"># Define elections_small</span></span>
+<span id="cb84-24"><a href="#cb84-24"></a>elections_small <span class="ot">&lt;-</span> elections <span class="sc">|&gt;</span></span>
+<span id="cb84-25"><a href="#cb84-25"></a>  <span class="fu">select</span>(state_name, county_name, total_votes_20, repub_pct_20, dem_pct_20, total_votes_16, dem_pct_16)</span>
+<span id="cb84-26"><a href="#cb84-26"></a></span>
+<span id="cb84-27"><a href="#cb84-27"></a><span class="co"># Check out the first 6 rows to confirm your code did what you think it did!</span></span>
+<span id="cb84-28"><a href="#cb84-28"></a><span class="fu">head</span>(elections_small)</span>
+<span id="cb84-29"><a href="#cb84-29"></a></span>
+<span id="cb84-30"><a href="#cb84-30"></a><span class="in">```</span></span>
 <span id="cb84-31"><a href="#cb84-31"></a></span>
 <span id="cb84-32"><a href="#cb84-32"></a></span>
-<span id="cb84-33"><a href="#cb84-33"></a><span class="fu">### Exercise 2: `filter` Demo {-}</span></span>
-<span id="cb84-34"><a href="#cb84-34"></a></span>
-<span id="cb84-35"><a href="#cb84-35"></a>Whereas <span class="in">`select()`</span> selects certain *variables* or columns, `filter()` keeps certain *units of observation* or rows relative to their outcome on certain variables. To this end, we must:</span>
-<span id="cb84-36"><a href="#cb84-36"></a></span>
-<span id="cb84-37"><a href="#cb84-37"></a><span class="ss">-   </span>Identify the variable(s) that are relevant to the filter.</span>
-<span id="cb84-38"><a href="#cb84-38"></a></span>
-<span id="cb84-39"><a href="#cb84-39"></a><span class="ss">-   </span>Use a "logical comparison operator" to define which values of the variable to *keep*:</span>
-<span id="cb84-40"><a href="#cb84-40"></a></span>
-<span id="cb84-41"><a href="#cb84-41"></a>    | symbol             | meaning                   |</span>
-<span id="cb84-42"><a href="#cb84-42"></a>    |:-------------------|:--------------------------|</span>
-<span id="cb84-43"><a href="#cb84-43"></a>    | <span class="in">`==`</span>               | equal to                  |</span>
-<span id="cb84-44"><a href="#cb84-44"></a>    | <span class="in">`!=`</span>               | not equal to              |</span>
-<span id="cb84-45"><a href="#cb84-45"></a>    | <span class="in">`&gt;`</span>                | greater than              |</span>
-<span id="cb84-46"><a href="#cb84-46"></a>    | <span class="in">`&gt;=`</span>               | greater than or equal to  |</span>
-<span id="cb84-47"><a href="#cb84-47"></a>    | <span class="in">`&lt;`</span>                | less than                 |</span>
-<span id="cb84-48"><a href="#cb84-48"></a>    | <span class="in">`&lt;=`</span>               | less than or equal to     |</span>
-<span id="cb84-49"><a href="#cb84-49"></a>    | <span class="in">`%in% c(???, ???)`</span> | a list of multiple values |</span>
-<span id="cb84-50"><a href="#cb84-50"></a></span>
-<span id="cb84-51"><a href="#cb84-51"></a><span class="ss">-   </span>Use quotes <span class="in">`""`</span> when specifying outcomes of interest for a categorical variable.</span>
-<span id="cb84-52"><a href="#cb84-52"></a></span>
+<span id="cb84-33"><a href="#cb84-33"></a></span>
+<span id="cb84-34"><a href="#cb84-34"></a><span class="fu">### Exercise 2: `filter` Demo {-}</span></span>
+<span id="cb84-35"><a href="#cb84-35"></a></span>
+<span id="cb84-36"><a href="#cb84-36"></a>Whereas <span class="in">`select()`</span> selects certain *variables* or columns, `filter()` keeps certain *units of observation* or rows relative to their outcome on certain variables. To this end, we must:</span>
+<span id="cb84-37"><a href="#cb84-37"></a></span>
+<span id="cb84-38"><a href="#cb84-38"></a><span class="ss">-   </span>Identify the variable(s) that are relevant to the filter.</span>
+<span id="cb84-39"><a href="#cb84-39"></a></span>
+<span id="cb84-40"><a href="#cb84-40"></a><span class="ss">-   </span>Use a "logical comparison operator" to define which values of the variable to *keep*:</span>
+<span id="cb84-41"><a href="#cb84-41"></a></span>
+<span id="cb84-42"><a href="#cb84-42"></a>    | symbol             | meaning                   |</span>
+<span id="cb84-43"><a href="#cb84-43"></a>    |:-------------------|:--------------------------|</span>
+<span id="cb84-44"><a href="#cb84-44"></a>    | <span class="in">`==`</span>               | equal to                  |</span>
+<span id="cb84-45"><a href="#cb84-45"></a>    | <span class="in">`!=`</span>               | not equal to              |</span>
+<span id="cb84-46"><a href="#cb84-46"></a>    | <span class="in">`&gt;`</span>                | greater than              |</span>
+<span id="cb84-47"><a href="#cb84-47"></a>    | <span class="in">`&gt;=`</span>               | greater than or equal to  |</span>
+<span id="cb84-48"><a href="#cb84-48"></a>    | <span class="in">`&lt;`</span>                | less than                 |</span>
+<span id="cb84-49"><a href="#cb84-49"></a>    | <span class="in">`&lt;=`</span>               | less than or equal to     |</span>
+<span id="cb84-50"><a href="#cb84-50"></a>    | <span class="in">`%in% c(???, ???)`</span> | a list of multiple values |</span>
+<span id="cb84-51"><a href="#cb84-51"></a></span>
+<span id="cb84-52"><a href="#cb84-52"></a><span class="ss">-   </span>Use quotes <span class="in">`""`</span> when specifying outcomes of interest for a categorical variable.</span>
 <span id="cb84-53"><a href="#cb84-53"></a></span>
 <span id="cb84-54"><a href="#cb84-54"></a></span>
-<span id="cb84-55"><a href="#cb84-55"></a>::: {.callout-tip title="Commenting/Uncommenting Code"}</span>
-<span id="cb84-56"><a href="#cb84-56"></a></span>
-<span id="cb84-57"><a href="#cb84-57"></a>To comment/uncomment several lines of code at once, highlight them then click &lt;kbd&gt;ctrl/cmd+shift+c&lt;/kbd&gt;.</span>
-<span id="cb84-58"><a href="#cb84-58"></a></span>
-<span id="cb84-59"><a href="#cb84-59"></a>:::</span>
-<span id="cb84-60"><a href="#cb84-60"></a></span>
+<span id="cb84-55"><a href="#cb84-55"></a></span>
+<span id="cb84-56"><a href="#cb84-56"></a>::: {.callout-tip title="Commenting/Uncommenting Code"}</span>
+<span id="cb84-57"><a href="#cb84-57"></a></span>
+<span id="cb84-58"><a href="#cb84-58"></a>To comment/uncomment several lines of code at once, highlight them then click &lt;kbd&gt;ctrl/cmd+shift+c&lt;/kbd&gt;.</span>
+<span id="cb84-59"><a href="#cb84-59"></a></span>
+<span id="cb84-60"><a href="#cb84-60"></a>:::</span>
 <span id="cb84-61"><a href="#cb84-61"></a></span>
 <span id="cb84-62"><a href="#cb84-62"></a></span>
-<span id="cb84-65"><a href="#cb84-65"></a><span class="in">```{r}</span></span>
-<span id="cb84-66"><a href="#cb84-66"></a><span class="co"># Keep only data on counties in Hawaii</span></span>
-<span id="cb84-67"><a href="#cb84-67"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-68"><a href="#cb84-68"></a> <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Hawaii"</span>)</span>
-<span id="cb84-69"><a href="#cb84-69"></a><span class="in">```</span></span>
-<span id="cb84-70"><a href="#cb84-70"></a></span>
-<span id="cb84-73"><a href="#cb84-73"></a><span class="in">```{r}</span></span>
-<span id="cb84-74"><a href="#cb84-74"></a><span class="co"># What does this do? This keeps only counties in Hawaii or Delaware</span></span>
-<span id="cb84-75"><a href="#cb84-75"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-76"><a href="#cb84-76"></a>  <span class="fu">filter</span>(state_name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Hawaii"</span>, <span class="st">"Delaware"</span>))</span>
-<span id="cb84-77"><a href="#cb84-77"></a><span class="in">```</span></span>
-<span id="cb84-78"><a href="#cb84-78"></a></span>
-<span id="cb84-81"><a href="#cb84-81"></a><span class="in">```{r}</span></span>
-<span id="cb84-82"><a href="#cb84-82"></a><span class="co"># Keep only data on counties where the Republican got MORE THAN 93.97% of the vote in 2020</span></span>
-<span id="cb84-83"><a href="#cb84-83"></a><span class="co"># THINK: What variable is relevant here?</span></span>
-<span id="cb84-84"><a href="#cb84-84"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-85"><a href="#cb84-85"></a>  <span class="fu">filter</span>(repub_pct_20 <span class="sc">&gt;</span> <span class="fl">93.97</span>)</span>
-<span id="cb84-86"><a href="#cb84-86"></a></span>
-<span id="cb84-87"><a href="#cb84-87"></a><span class="in">```</span></span>
-<span id="cb84-88"><a href="#cb84-88"></a></span>
-<span id="cb84-91"><a href="#cb84-91"></a><span class="in">```{r}</span></span>
-<span id="cb84-92"><a href="#cb84-92"></a><span class="co"># Keep only data on counties where the Republican got AT LEAST 93.97% of the vote in 2020</span></span>
-<span id="cb84-93"><a href="#cb84-93"></a><span class="co"># This should have 1 more row (observation) than your answer above</span></span>
-<span id="cb84-94"><a href="#cb84-94"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-95"><a href="#cb84-95"></a>  <span class="fu">filter</span>(repub_pct_20 <span class="sc">&gt;=</span> <span class="fl">93.97</span>)</span>
-<span id="cb84-96"><a href="#cb84-96"></a></span>
-<span id="cb84-97"><a href="#cb84-97"></a><span class="in">```</span></span>
-<span id="cb84-98"><a href="#cb84-98"></a></span>
-<span id="cb84-99"><a href="#cb84-99"></a>We can also filter with respect to 2 rules! Here, think what variables are relevant.</span>
-<span id="cb84-100"><a href="#cb84-100"></a></span>
-<span id="cb84-103"><a href="#cb84-103"></a><span class="in">```{r}</span></span>
-<span id="cb84-104"><a href="#cb84-104"></a><span class="co"># Keep only data on counties in Texas where the Democrat got more than 65% of the vote in 2020</span></span>
-<span id="cb84-105"><a href="#cb84-105"></a><span class="co"># Do this 2 ways.</span></span>
-<span id="cb84-106"><a href="#cb84-106"></a><span class="co"># Method 1: 2 filters with 1 condition each</span></span>
-<span id="cb84-107"><a href="#cb84-107"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-108"><a href="#cb84-108"></a> <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Texas"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb84-109"><a href="#cb84-109"></a> <span class="fu">filter</span>(repub_pct_20 <span class="sc">&gt;</span> <span class="dv">65</span>)</span>
-<span id="cb84-110"><a href="#cb84-110"></a></span>
-<span id="cb84-111"><a href="#cb84-111"></a><span class="co"># Method 2: 1 filter with 2 conditions</span></span>
-<span id="cb84-112"><a href="#cb84-112"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-113"><a href="#cb84-113"></a> <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Texas"</span>, repub_pct_20 <span class="sc">&gt;</span> <span class="dv">65</span>)</span>
-<span id="cb84-114"><a href="#cb84-114"></a><span class="in">```</span></span>
-<span id="cb84-115"><a href="#cb84-115"></a></span>
+<span id="cb84-63"><a href="#cb84-63"></a></span>
+<span id="cb84-66"><a href="#cb84-66"></a><span class="in">```{r}</span></span>
+<span id="cb84-67"><a href="#cb84-67"></a><span class="co"># Keep only data on counties in Hawaii</span></span>
+<span id="cb84-68"><a href="#cb84-68"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-69"><a href="#cb84-69"></a> <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Hawaii"</span>)</span>
+<span id="cb84-70"><a href="#cb84-70"></a><span class="in">```</span></span>
+<span id="cb84-71"><a href="#cb84-71"></a></span>
+<span id="cb84-74"><a href="#cb84-74"></a><span class="in">```{r}</span></span>
+<span id="cb84-75"><a href="#cb84-75"></a><span class="co"># What does this do? This keeps only counties in Hawaii or Delaware</span></span>
+<span id="cb84-76"><a href="#cb84-76"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-77"><a href="#cb84-77"></a>  <span class="fu">filter</span>(state_name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Hawaii"</span>, <span class="st">"Delaware"</span>))</span>
+<span id="cb84-78"><a href="#cb84-78"></a><span class="in">```</span></span>
+<span id="cb84-79"><a href="#cb84-79"></a></span>
+<span id="cb84-82"><a href="#cb84-82"></a><span class="in">```{r}</span></span>
+<span id="cb84-83"><a href="#cb84-83"></a><span class="co"># Keep only data on counties where the Republican got MORE THAN 93.97% of the vote in 2020</span></span>
+<span id="cb84-84"><a href="#cb84-84"></a><span class="co"># THINK: What variable is relevant here?</span></span>
+<span id="cb84-85"><a href="#cb84-85"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-86"><a href="#cb84-86"></a>  <span class="fu">filter</span>(repub_pct_20 <span class="sc">&gt;</span> <span class="fl">93.97</span>)</span>
+<span id="cb84-87"><a href="#cb84-87"></a></span>
+<span id="cb84-88"><a href="#cb84-88"></a><span class="in">```</span></span>
+<span id="cb84-89"><a href="#cb84-89"></a></span>
+<span id="cb84-92"><a href="#cb84-92"></a><span class="in">```{r}</span></span>
+<span id="cb84-93"><a href="#cb84-93"></a><span class="co"># Keep only data on counties where the Republican got AT LEAST 93.97% of the vote in 2020</span></span>
+<span id="cb84-94"><a href="#cb84-94"></a><span class="co"># This should have 1 more row (observation) than your answer above</span></span>
+<span id="cb84-95"><a href="#cb84-95"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-96"><a href="#cb84-96"></a>  <span class="fu">filter</span>(repub_pct_20 <span class="sc">&gt;=</span> <span class="fl">93.97</span>)</span>
+<span id="cb84-97"><a href="#cb84-97"></a></span>
+<span id="cb84-98"><a href="#cb84-98"></a><span class="in">```</span></span>
+<span id="cb84-99"><a href="#cb84-99"></a></span>
+<span id="cb84-100"><a href="#cb84-100"></a>We can also filter with respect to 2 rules! Here, think what variables are relevant.</span>
+<span id="cb84-101"><a href="#cb84-101"></a></span>
+<span id="cb84-104"><a href="#cb84-104"></a><span class="in">```{r}</span></span>
+<span id="cb84-105"><a href="#cb84-105"></a><span class="co"># Keep only data on counties in Texas where the Democrat got more than 65% of the vote in 2020</span></span>
+<span id="cb84-106"><a href="#cb84-106"></a><span class="co"># Do this 2 ways.</span></span>
+<span id="cb84-107"><a href="#cb84-107"></a><span class="co"># Method 1: 2 filters with 1 condition each</span></span>
+<span id="cb84-108"><a href="#cb84-108"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-109"><a href="#cb84-109"></a> <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Texas"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb84-110"><a href="#cb84-110"></a> <span class="fu">filter</span>(repub_pct_20 <span class="sc">&gt;</span> <span class="dv">65</span>)</span>
+<span id="cb84-111"><a href="#cb84-111"></a></span>
+<span id="cb84-112"><a href="#cb84-112"></a><span class="co"># Method 2: 1 filter with 2 conditions</span></span>
+<span id="cb84-113"><a href="#cb84-113"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-114"><a href="#cb84-114"></a> <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Texas"</span>, repub_pct_20 <span class="sc">&gt;</span> <span class="dv">65</span>)</span>
+<span id="cb84-115"><a href="#cb84-115"></a><span class="in">```</span></span>
 <span id="cb84-116"><a href="#cb84-116"></a></span>
 <span id="cb84-117"><a href="#cb84-117"></a></span>
-<span id="cb84-118"><a href="#cb84-118"></a><span class="fu">### Exercise 3: `arrange` Demo {-}</span></span>
-<span id="cb84-119"><a href="#cb84-119"></a></span>
+<span id="cb84-118"><a href="#cb84-118"></a></span>
+<span id="cb84-119"><a href="#cb84-119"></a><span class="fu">### Exercise 3: `arrange` Demo {-}</span></span>
 <span id="cb84-120"><a href="#cb84-120"></a></span>
-<span id="cb84-121"><a href="#cb84-121"></a><span class="in">`arrange()`</span> arranges or sorts the *rows* in a dataset according to a given column or variable, in ascending or descending order:</span>
-<span id="cb84-122"><a href="#cb84-122"></a></span>
-<span id="cb84-123"><a href="#cb84-123"></a><span class="in">`arrange(variable)`</span>, <span class="in">`arrange(desc(variable))`</span></span>
-<span id="cb84-124"><a href="#cb84-124"></a></span>
-<span id="cb84-127"><a href="#cb84-127"></a><span class="in">```{r}</span></span>
-<span id="cb84-128"><a href="#cb84-128"></a><span class="co"># Arrange the counties in elections_small from lowest to highest percentage of 2020 Republican support</span></span>
-<span id="cb84-129"><a href="#cb84-129"></a><span class="co"># Print out just the first 6 rows</span></span>
-<span id="cb84-130"><a href="#cb84-130"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-131"><a href="#cb84-131"></a>  <span class="fu">arrange</span>(repub_pct_20) <span class="sc">|&gt;</span></span>
-<span id="cb84-132"><a href="#cb84-132"></a>  <span class="fu">head</span>()</span>
-<span id="cb84-133"><a href="#cb84-133"></a><span class="in">```</span></span>
-<span id="cb84-134"><a href="#cb84-134"></a></span>
-<span id="cb84-137"><a href="#cb84-137"></a><span class="in">```{r}</span></span>
-<span id="cb84-138"><a href="#cb84-138"></a><span class="co"># Arrange the counties in elections_small from highest to lowest percentage of 2020 Republican support</span></span>
-<span id="cb84-139"><a href="#cb84-139"></a><span class="co"># Print out just the first 6 rows</span></span>
-<span id="cb84-140"><a href="#cb84-140"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-141"><a href="#cb84-141"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(repub_pct_20)) <span class="sc">|&gt;</span></span>
-<span id="cb84-142"><a href="#cb84-142"></a>  <span class="fu">head</span>()</span>
-<span id="cb84-143"><a href="#cb84-143"></a>  </span>
-<span id="cb84-144"><a href="#cb84-144"></a><span class="in">```</span></span>
-<span id="cb84-145"><a href="#cb84-145"></a></span>
+<span id="cb84-121"><a href="#cb84-121"></a></span>
+<span id="cb84-122"><a href="#cb84-122"></a><span class="in">`arrange()`</span> arranges or sorts the *rows* in a dataset according to a given column or variable, in ascending or descending order:</span>
+<span id="cb84-123"><a href="#cb84-123"></a></span>
+<span id="cb84-124"><a href="#cb84-124"></a><span class="in">`arrange(variable)`</span>, <span class="in">`arrange(desc(variable))`</span></span>
+<span id="cb84-125"><a href="#cb84-125"></a></span>
+<span id="cb84-128"><a href="#cb84-128"></a><span class="in">```{r}</span></span>
+<span id="cb84-129"><a href="#cb84-129"></a><span class="co"># Arrange the counties in elections_small from lowest to highest percentage of 2020 Republican support</span></span>
+<span id="cb84-130"><a href="#cb84-130"></a><span class="co"># Print out just the first 6 rows</span></span>
+<span id="cb84-131"><a href="#cb84-131"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-132"><a href="#cb84-132"></a>  <span class="fu">arrange</span>(repub_pct_20) <span class="sc">|&gt;</span></span>
+<span id="cb84-133"><a href="#cb84-133"></a>  <span class="fu">head</span>()</span>
+<span id="cb84-134"><a href="#cb84-134"></a><span class="in">```</span></span>
+<span id="cb84-135"><a href="#cb84-135"></a></span>
+<span id="cb84-138"><a href="#cb84-138"></a><span class="in">```{r}</span></span>
+<span id="cb84-139"><a href="#cb84-139"></a><span class="co"># Arrange the counties in elections_small from highest to lowest percentage of 2020 Republican support</span></span>
+<span id="cb84-140"><a href="#cb84-140"></a><span class="co"># Print out just the first 6 rows</span></span>
+<span id="cb84-141"><a href="#cb84-141"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-142"><a href="#cb84-142"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(repub_pct_20)) <span class="sc">|&gt;</span></span>
+<span id="cb84-143"><a href="#cb84-143"></a>  <span class="fu">head</span>()</span>
+<span id="cb84-144"><a href="#cb84-144"></a>  </span>
+<span id="cb84-145"><a href="#cb84-145"></a><span class="in">```</span></span>
 <span id="cb84-146"><a href="#cb84-146"></a></span>
 <span id="cb84-147"><a href="#cb84-147"></a></span>
-<span id="cb84-148"><a href="#cb84-148"></a><span class="fu">### Exercise 4: `mutate` Demo {-}</span></span>
-<span id="cb84-149"><a href="#cb84-149"></a></span>
+<span id="cb84-148"><a href="#cb84-148"></a></span>
+<span id="cb84-149"><a href="#cb84-149"></a><span class="fu">### Exercise 4: `mutate` Demo {-}</span></span>
 <span id="cb84-150"><a href="#cb84-150"></a></span>
-<span id="cb84-151"><a href="#cb84-151"></a><span class="in">`mutate()`</span> can either transform / mutate an existing variable (column), or define a new variable based on existing ones.</span>
-<span id="cb84-152"><a href="#cb84-152"></a></span>
-<span id="cb84-153"><a href="#cb84-153"></a><span class="fu">#### Part a {-}</span></span>
-<span id="cb84-154"><a href="#cb84-154"></a></span>
-<span id="cb84-157"><a href="#cb84-157"></a><span class="in">```{r}</span></span>
-<span id="cb84-158"><a href="#cb84-158"></a><span class="co"># What did this code do? It created a new variable called diff_20 that is the difference between the republican percentage and democratic percentage voting in each county</span></span>
-<span id="cb84-159"><a href="#cb84-159"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-160"><a href="#cb84-160"></a>  <span class="fu">mutate</span>(<span class="at">diff_20 =</span> repub_pct_20 <span class="sc">-</span> dem_pct_20) <span class="sc">|&gt;</span></span>
-<span id="cb84-161"><a href="#cb84-161"></a>  <span class="fu">head</span>()</span>
-<span id="cb84-162"><a href="#cb84-162"></a><span class="in">```</span></span>
-<span id="cb84-163"><a href="#cb84-163"></a></span>
-<span id="cb84-166"><a href="#cb84-166"></a><span class="in">```{r}</span></span>
-<span id="cb84-167"><a href="#cb84-167"></a><span class="co"># What did this code do? It creates a new variable called repub_votes_20 that is the total number of people in each county who voted republican in 2020</span></span>
-<span id="cb84-168"><a href="#cb84-168"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-169"><a href="#cb84-169"></a>  <span class="fu">mutate</span>(<span class="at">repub_votes_20 =</span> <span class="fu">round</span>(total_votes_20 <span class="sc">*</span> repub_pct_20<span class="sc">/</span><span class="dv">100</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb84-170"><a href="#cb84-170"></a>  <span class="fu">head</span>()</span>
-<span id="cb84-171"><a href="#cb84-171"></a><span class="in">```</span></span>
-<span id="cb84-172"><a href="#cb84-172"></a></span>
-<span id="cb84-175"><a href="#cb84-175"></a><span class="in">```{r}</span></span>
-<span id="cb84-176"><a href="#cb84-176"></a><span class="co"># What did this code do? It creates a new variable to test if republicans got more votes than democrats in each county, or if republicans won the county.</span></span>
-<span id="cb84-177"><a href="#cb84-177"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-178"><a href="#cb84-178"></a>  <span class="fu">mutate</span>(<span class="at">repub_win_20 =</span> repub_pct_20 <span class="sc">&gt;</span> dem_pct_20) <span class="sc">|&gt;</span></span>
-<span id="cb84-179"><a href="#cb84-179"></a>  <span class="fu">head</span>()</span>
-<span id="cb84-180"><a href="#cb84-180"></a><span class="in">```</span></span>
-<span id="cb84-181"><a href="#cb84-181"></a></span>
-<span id="cb84-182"><a href="#cb84-182"></a><span class="fu">#### Part b {-}</span></span>
-<span id="cb84-183"><a href="#cb84-183"></a></span>
-<span id="cb84-186"><a href="#cb84-186"></a><span class="in">```{r}</span></span>
-<span id="cb84-187"><a href="#cb84-187"></a><span class="co"># You try</span></span>
-<span id="cb84-188"><a href="#cb84-188"></a><span class="co"># Define a variable that calculates the change in Dem support in 2020 vs 2016</span></span>
-<span id="cb84-189"><a href="#cb84-189"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-190"><a href="#cb84-190"></a> <span class="fu">mutate</span>(<span class="at">dem_diff =</span> dem_pct_20 <span class="sc">-</span> dem_pct_16) <span class="sc">|&gt;</span></span>
-<span id="cb84-191"><a href="#cb84-191"></a> <span class="fu">head</span>()</span>
-<span id="cb84-192"><a href="#cb84-192"></a><span class="in">```</span></span>
-<span id="cb84-193"><a href="#cb84-193"></a></span>
-<span id="cb84-196"><a href="#cb84-196"></a><span class="in">```{r}</span></span>
-<span id="cb84-197"><a href="#cb84-197"></a><span class="co"># You try</span></span>
-<span id="cb84-198"><a href="#cb84-198"></a><span class="co"># Define a variable that determines whether the Dem support was higher in 2020 than in 2016 (TRUE/FALSE)</span></span>
-<span id="cb84-199"><a href="#cb84-199"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-200"><a href="#cb84-200"></a><span class="fu">mutate</span>(<span class="at">dem_increase =</span> (dem_pct_20 <span class="sc">-</span> dem_pct_16) <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">|&gt;</span></span>
-<span id="cb84-201"><a href="#cb84-201"></a> <span class="fu">head</span>()</span>
-<span id="cb84-202"><a href="#cb84-202"></a><span class="in">```</span></span>
-<span id="cb84-203"><a href="#cb84-203"></a></span>
+<span id="cb84-151"><a href="#cb84-151"></a></span>
+<span id="cb84-152"><a href="#cb84-152"></a><span class="in">`mutate()`</span> can either transform / mutate an existing variable (column), or define a new variable based on existing ones.</span>
+<span id="cb84-153"><a href="#cb84-153"></a></span>
+<span id="cb84-154"><a href="#cb84-154"></a><span class="fu">#### Part a {-}</span></span>
+<span id="cb84-155"><a href="#cb84-155"></a></span>
+<span id="cb84-158"><a href="#cb84-158"></a><span class="in">```{r}</span></span>
+<span id="cb84-159"><a href="#cb84-159"></a><span class="co"># What did this code do? It created a new variable called diff_20 that is the difference between the republican percentage and democratic percentage voting in each county</span></span>
+<span id="cb84-160"><a href="#cb84-160"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-161"><a href="#cb84-161"></a>  <span class="fu">mutate</span>(<span class="at">diff_20 =</span> repub_pct_20 <span class="sc">-</span> dem_pct_20) <span class="sc">|&gt;</span></span>
+<span id="cb84-162"><a href="#cb84-162"></a>  <span class="fu">head</span>()</span>
+<span id="cb84-163"><a href="#cb84-163"></a><span class="in">```</span></span>
+<span id="cb84-164"><a href="#cb84-164"></a></span>
+<span id="cb84-167"><a href="#cb84-167"></a><span class="in">```{r}</span></span>
+<span id="cb84-168"><a href="#cb84-168"></a><span class="co"># What did this code do? It creates a new variable called repub_votes_20 that is the total number of people in each county who voted republican in 2020</span></span>
+<span id="cb84-169"><a href="#cb84-169"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-170"><a href="#cb84-170"></a>  <span class="fu">mutate</span>(<span class="at">repub_votes_20 =</span> <span class="fu">round</span>(total_votes_20 <span class="sc">*</span> repub_pct_20<span class="sc">/</span><span class="dv">100</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb84-171"><a href="#cb84-171"></a>  <span class="fu">head</span>()</span>
+<span id="cb84-172"><a href="#cb84-172"></a><span class="in">```</span></span>
+<span id="cb84-173"><a href="#cb84-173"></a></span>
+<span id="cb84-176"><a href="#cb84-176"></a><span class="in">```{r}</span></span>
+<span id="cb84-177"><a href="#cb84-177"></a><span class="co"># What did this code do? It creates a new variable to test if republicans got more votes than democrats in each county, or if republicans won the county.</span></span>
+<span id="cb84-178"><a href="#cb84-178"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-179"><a href="#cb84-179"></a>  <span class="fu">mutate</span>(<span class="at">repub_win_20 =</span> repub_pct_20 <span class="sc">&gt;</span> dem_pct_20) <span class="sc">|&gt;</span></span>
+<span id="cb84-180"><a href="#cb84-180"></a>  <span class="fu">head</span>()</span>
+<span id="cb84-181"><a href="#cb84-181"></a><span class="in">```</span></span>
+<span id="cb84-182"><a href="#cb84-182"></a></span>
+<span id="cb84-183"><a href="#cb84-183"></a><span class="fu">#### Part b {-}</span></span>
+<span id="cb84-184"><a href="#cb84-184"></a></span>
+<span id="cb84-187"><a href="#cb84-187"></a><span class="in">```{r}</span></span>
+<span id="cb84-188"><a href="#cb84-188"></a><span class="co"># You try</span></span>
+<span id="cb84-189"><a href="#cb84-189"></a><span class="co"># Define a variable that calculates the change in Dem support in 2020 vs 2016</span></span>
+<span id="cb84-190"><a href="#cb84-190"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-191"><a href="#cb84-191"></a> <span class="fu">mutate</span>(<span class="at">dem_diff =</span> dem_pct_20 <span class="sc">-</span> dem_pct_16) <span class="sc">|&gt;</span></span>
+<span id="cb84-192"><a href="#cb84-192"></a> <span class="fu">head</span>()</span>
+<span id="cb84-193"><a href="#cb84-193"></a><span class="in">```</span></span>
+<span id="cb84-194"><a href="#cb84-194"></a></span>
+<span id="cb84-197"><a href="#cb84-197"></a><span class="in">```{r}</span></span>
+<span id="cb84-198"><a href="#cb84-198"></a><span class="co"># You try</span></span>
+<span id="cb84-199"><a href="#cb84-199"></a><span class="co"># Define a variable that determines whether the Dem support was higher in 2020 than in 2016 (TRUE/FALSE)</span></span>
+<span id="cb84-200"><a href="#cb84-200"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-201"><a href="#cb84-201"></a><span class="fu">mutate</span>(<span class="at">dem_increase =</span> (dem_pct_20 <span class="sc">-</span> dem_pct_16) <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">|&gt;</span></span>
+<span id="cb84-202"><a href="#cb84-202"></a> <span class="fu">head</span>()</span>
+<span id="cb84-203"><a href="#cb84-203"></a><span class="in">```</span></span>
 <span id="cb84-204"><a href="#cb84-204"></a></span>
 <span id="cb84-205"><a href="#cb84-205"></a></span>
-<span id="cb84-206"><a href="#cb84-206"></a><span class="fu">### Exercise 5: Pipe Series {-}</span></span>
-<span id="cb84-207"><a href="#cb84-207"></a></span>
-<span id="cb84-208"><a href="#cb84-208"></a>Let's now combine these verbs into a pipe series!</span>
-<span id="cb84-209"><a href="#cb84-209"></a></span>
-<span id="cb84-210"><a href="#cb84-210"></a><span class="fu">#### Part a {-}</span></span>
-<span id="cb84-211"><a href="#cb84-211"></a></span>
-<span id="cb84-212"><a href="#cb84-212"></a>::: {.callout-important title="Think then Run"}</span>
-<span id="cb84-213"><a href="#cb84-213"></a></span>
-<span id="cb84-214"><a href="#cb84-214"></a>BEFORE running the below chunk, what do you think it will produce?</span>
-<span id="cb84-215"><a href="#cb84-215"></a></span>
-<span id="cb84-216"><a href="#cb84-216"></a>I think it will give a list of counties in Wisconsin in which the democratic vote percentage was higher in 2020 than the republican percentage was in 2020, and then arrange them from counties with the most to least total votes.</span>
-<span id="cb84-217"><a href="#cb84-217"></a>:::</span>
-<span id="cb84-218"><a href="#cb84-218"></a></span>
-<span id="cb84-221"><a href="#cb84-221"></a><span class="in">```{r}</span></span>
-<span id="cb84-222"><a href="#cb84-222"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-223"><a href="#cb84-223"></a>  <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Wisconsin"</span>,</span>
-<span id="cb84-224"><a href="#cb84-224"></a>         repub_pct_20 <span class="sc">&lt;</span> dem_pct_20) <span class="sc">|&gt;</span></span>
-<span id="cb84-225"><a href="#cb84-225"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total_votes_20)) <span class="sc">|&gt;</span></span>
-<span id="cb84-226"><a href="#cb84-226"></a>  <span class="fu">head</span>()</span>
-<span id="cb84-227"><a href="#cb84-227"></a><span class="in">```</span></span>
-<span id="cb84-228"><a href="#cb84-228"></a></span>
-<span id="cb84-229"><a href="#cb84-229"></a><span class="fu">#### Part b {-}</span></span>
-<span id="cb84-230"><a href="#cb84-230"></a></span>
-<span id="cb84-231"><a href="#cb84-231"></a>::: {.callout-important title="Think then Run"}</span>
-<span id="cb84-232"><a href="#cb84-232"></a></span>
-<span id="cb84-233"><a href="#cb84-233"></a>BEFORE trying, what do you think will happen if you change the order of filter and arrange:</span>
-<span id="cb84-234"><a href="#cb84-234"></a></span>
-<span id="cb84-235"><a href="#cb84-235"></a><span class="ss">-   </span>the results will be the same. I think this is the case.</span>
-<span id="cb84-236"><a href="#cb84-236"></a></span>
-<span id="cb84-237"><a href="#cb84-237"></a>:::</span>
-<span id="cb84-238"><a href="#cb84-238"></a></span>
-<span id="cb84-241"><a href="#cb84-241"></a><span class="in">```{r}</span></span>
-<span id="cb84-242"><a href="#cb84-242"></a><span class="co"># Now try it. Change the order of filter and arrange below.</span></span>
-<span id="cb84-243"><a href="#cb84-243"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-244"><a href="#cb84-244"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total_votes_20)) <span class="sc">|&gt;</span></span>
-<span id="cb84-245"><a href="#cb84-245"></a>  <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Wisconsin"</span>,</span>
-<span id="cb84-246"><a href="#cb84-246"></a>         repub_pct_20 <span class="sc">&lt;</span> dem_pct_20) <span class="sc">|&gt;</span></span>
-<span id="cb84-247"><a href="#cb84-247"></a>  <span class="fu">head</span>()</span>
-<span id="cb84-248"><a href="#cb84-248"></a><span class="in">```</span></span>
-<span id="cb84-249"><a href="#cb84-249"></a></span>
-<span id="cb84-250"><a href="#cb84-250"></a><span class="fu">#### Part c {-}</span></span>
-<span id="cb84-251"><a href="#cb84-251"></a></span>
-<span id="cb84-252"><a href="#cb84-252"></a>So the order of <span class="in">`filter()`</span> and <span class="in">`arrange()`</span> did *not* matter -- rerranging them produces the same results. BUT what is one *advantage* of filtering before arranging? It means the computer has to process less data and will take a shorter time running the code overall. This is particularly nice I am guessing if we are working with very large data sets.</span>
-<span id="cb84-253"><a href="#cb84-253"></a></span>
-<span id="cb84-254"><a href="#cb84-254"></a><span class="fu">#### Part d {-}</span></span>
-<span id="cb84-255"><a href="#cb84-255"></a></span>
-<span id="cb84-256"><a href="#cb84-256"></a>::: {.callout-important title="Think then Run"}</span>
-<span id="cb84-257"><a href="#cb84-257"></a></span>
-<span id="cb84-258"><a href="#cb84-258"></a>BEFORE running the below chunk, what do you think it will produce? I think it will show only counties in Delaware and create a new variable for them showing if republicans won in 2020, then it will narrow the data frame to only include 4 variables.</span>
-<span id="cb84-259"><a href="#cb84-259"></a></span>
-<span id="cb84-260"><a href="#cb84-260"></a>:::</span>
-<span id="cb84-261"><a href="#cb84-261"></a></span>
-<span id="cb84-264"><a href="#cb84-264"></a><span class="in">```{r}</span></span>
-<span id="cb84-265"><a href="#cb84-265"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-266"><a href="#cb84-266"></a>  <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Delaware"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb84-267"><a href="#cb84-267"></a>  <span class="fu">mutate</span>(<span class="at">repub_win_20 =</span> repub_pct_20 <span class="sc">&gt;</span> dem_pct_20) <span class="sc">|&gt;</span></span>
-<span id="cb84-268"><a href="#cb84-268"></a>  <span class="fu">select</span>(county_name, repub_pct_20, dem_pct_20, repub_win_20)</span>
-<span id="cb84-269"><a href="#cb84-269"></a><span class="in">```</span></span>
-<span id="cb84-270"><a href="#cb84-270"></a></span>
-<span id="cb84-271"><a href="#cb84-271"></a><span class="fu">#### Part e {-}</span></span>
-<span id="cb84-272"><a href="#cb84-272"></a></span>
-<span id="cb84-273"><a href="#cb84-273"></a>::: {.callout-important title="Think then Run"}</span>
-<span id="cb84-274"><a href="#cb84-274"></a></span>
-<span id="cb84-275"><a href="#cb84-275"></a>BEFORE trying, what do you think will happen if you change the order of mutate and select:</span>
-<span id="cb84-276"><a href="#cb84-276"></a></span>
-<span id="cb84-277"><a href="#cb84-277"></a><span class="ss">2.   </span>we'll get an error, because we can't select a variable that hasn't been created yet.</span>
-<span id="cb84-278"><a href="#cb84-278"></a></span>
-<span id="cb84-279"><a href="#cb84-279"></a>:::</span>
-<span id="cb84-280"><a href="#cb84-280"></a></span>
-<span id="cb84-283"><a href="#cb84-283"></a><span class="in">```{r}</span></span>
-<span id="cb84-284"><a href="#cb84-284"></a><span class="co"># Now try it. Change the order of mutate and select below.</span></span>
-<span id="cb84-285"><a href="#cb84-285"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-286"><a href="#cb84-286"></a>  <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Delaware"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb84-287"><a href="#cb84-287"></a>  <span class="fu">mutate</span>(<span class="at">repub_win_20 =</span> repub_pct_20 <span class="sc">&gt;</span> dem_pct_20) <span class="sc">|&gt;</span></span>
-<span id="cb84-288"><a href="#cb84-288"></a>  <span class="fu">select</span>(county_name, repub_pct_20, dem_pct_20, repub_win_20)</span>
-<span id="cb84-289"><a href="#cb84-289"></a></span>
-<span id="cb84-290"><a href="#cb84-290"></a><span class="co"># The below code did not work because the variable county_name did not exist yet</span></span>
-<span id="cb84-291"><a href="#cb84-291"></a><span class="co"># elections_small |&gt;</span></span>
-<span id="cb84-292"><a href="#cb84-292"></a><span class="co">#   filter(state_name == "Delaware") |&gt;</span></span>
-<span id="cb84-293"><a href="#cb84-293"></a><span class="co">#   select(county_name, repub_pct_20, dem_pct_20, repub_win_20) |&gt;</span></span>
-<span id="cb84-294"><a href="#cb84-294"></a><span class="co">#   mutate(repub_win_20 = repub_pct_20 &gt; dem_pct_20)</span></span>
-<span id="cb84-295"><a href="#cb84-295"></a></span>
-<span id="cb84-296"><a href="#cb84-296"></a><span class="in">```</span></span>
-<span id="cb84-297"><a href="#cb84-297"></a></span>
+<span id="cb84-206"><a href="#cb84-206"></a></span>
+<span id="cb84-207"><a href="#cb84-207"></a><span class="fu">### Exercise 5: Pipe Series {-}</span></span>
+<span id="cb84-208"><a href="#cb84-208"></a></span>
+<span id="cb84-209"><a href="#cb84-209"></a>Let's now combine these verbs into a pipe series!</span>
+<span id="cb84-210"><a href="#cb84-210"></a></span>
+<span id="cb84-211"><a href="#cb84-211"></a><span class="fu">#### Part a {-}</span></span>
+<span id="cb84-212"><a href="#cb84-212"></a></span>
+<span id="cb84-213"><a href="#cb84-213"></a>::: {.callout-important title="Think then Run"}</span>
+<span id="cb84-214"><a href="#cb84-214"></a></span>
+<span id="cb84-215"><a href="#cb84-215"></a>BEFORE running the below chunk, what do you think it will produce?</span>
+<span id="cb84-216"><a href="#cb84-216"></a></span>
+<span id="cb84-217"><a href="#cb84-217"></a>I think it will give a list of counties in Wisconsin in which the democratic vote percentage was higher in 2020 than the republican percentage was in 2020, and then arrange them from counties with the most to least total votes.</span>
+<span id="cb84-218"><a href="#cb84-218"></a>:::</span>
+<span id="cb84-219"><a href="#cb84-219"></a></span>
+<span id="cb84-222"><a href="#cb84-222"></a><span class="in">```{r}</span></span>
+<span id="cb84-223"><a href="#cb84-223"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-224"><a href="#cb84-224"></a>  <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Wisconsin"</span>,</span>
+<span id="cb84-225"><a href="#cb84-225"></a>         repub_pct_20 <span class="sc">&lt;</span> dem_pct_20) <span class="sc">|&gt;</span></span>
+<span id="cb84-226"><a href="#cb84-226"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total_votes_20)) <span class="sc">|&gt;</span></span>
+<span id="cb84-227"><a href="#cb84-227"></a>  <span class="fu">head</span>()</span>
+<span id="cb84-228"><a href="#cb84-228"></a><span class="in">```</span></span>
+<span id="cb84-229"><a href="#cb84-229"></a></span>
+<span id="cb84-230"><a href="#cb84-230"></a><span class="fu">#### Part b {-}</span></span>
+<span id="cb84-231"><a href="#cb84-231"></a></span>
+<span id="cb84-232"><a href="#cb84-232"></a>::: {.callout-important title="Think then Run"}</span>
+<span id="cb84-233"><a href="#cb84-233"></a></span>
+<span id="cb84-234"><a href="#cb84-234"></a>BEFORE trying, what do you think will happen if you change the order of filter and arrange:</span>
+<span id="cb84-235"><a href="#cb84-235"></a></span>
+<span id="cb84-236"><a href="#cb84-236"></a><span class="ss">-   </span>the results will be the same. I think this is the case.</span>
+<span id="cb84-237"><a href="#cb84-237"></a></span>
+<span id="cb84-238"><a href="#cb84-238"></a>:::</span>
+<span id="cb84-239"><a href="#cb84-239"></a></span>
+<span id="cb84-242"><a href="#cb84-242"></a><span class="in">```{r}</span></span>
+<span id="cb84-243"><a href="#cb84-243"></a><span class="co"># Now try it. Change the order of filter and arrange below.</span></span>
+<span id="cb84-244"><a href="#cb84-244"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-245"><a href="#cb84-245"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total_votes_20)) <span class="sc">|&gt;</span></span>
+<span id="cb84-246"><a href="#cb84-246"></a>  <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Wisconsin"</span>,</span>
+<span id="cb84-247"><a href="#cb84-247"></a>         repub_pct_20 <span class="sc">&lt;</span> dem_pct_20) <span class="sc">|&gt;</span></span>
+<span id="cb84-248"><a href="#cb84-248"></a>  <span class="fu">head</span>()</span>
+<span id="cb84-249"><a href="#cb84-249"></a><span class="in">```</span></span>
+<span id="cb84-250"><a href="#cb84-250"></a></span>
+<span id="cb84-251"><a href="#cb84-251"></a><span class="fu">#### Part c {-}</span></span>
+<span id="cb84-252"><a href="#cb84-252"></a></span>
+<span id="cb84-253"><a href="#cb84-253"></a>So the order of <span class="in">`filter()`</span> and <span class="in">`arrange()`</span> did *not* matter -- rerranging them produces the same results. BUT what is one *advantage* of filtering before arranging? It means the computer has to process less data and will take a shorter time running the code overall. This is particularly nice I am guessing if we are working with very large data sets.</span>
+<span id="cb84-254"><a href="#cb84-254"></a></span>
+<span id="cb84-255"><a href="#cb84-255"></a><span class="fu">#### Part d {-}</span></span>
+<span id="cb84-256"><a href="#cb84-256"></a></span>
+<span id="cb84-257"><a href="#cb84-257"></a>::: {.callout-important title="Think then Run"}</span>
+<span id="cb84-258"><a href="#cb84-258"></a></span>
+<span id="cb84-259"><a href="#cb84-259"></a>BEFORE running the below chunk, what do you think it will produce? I think it will show only counties in Delaware and create a new variable for them showing if republicans won in 2020, then it will narrow the data frame to only include 4 variables.</span>
+<span id="cb84-260"><a href="#cb84-260"></a></span>
+<span id="cb84-261"><a href="#cb84-261"></a>:::</span>
+<span id="cb84-262"><a href="#cb84-262"></a></span>
+<span id="cb84-265"><a href="#cb84-265"></a><span class="in">```{r}</span></span>
+<span id="cb84-266"><a href="#cb84-266"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-267"><a href="#cb84-267"></a>  <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Delaware"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb84-268"><a href="#cb84-268"></a>  <span class="fu">mutate</span>(<span class="at">repub_win_20 =</span> repub_pct_20 <span class="sc">&gt;</span> dem_pct_20) <span class="sc">|&gt;</span></span>
+<span id="cb84-269"><a href="#cb84-269"></a>  <span class="fu">select</span>(county_name, repub_pct_20, dem_pct_20, repub_win_20)</span>
+<span id="cb84-270"><a href="#cb84-270"></a><span class="in">```</span></span>
+<span id="cb84-271"><a href="#cb84-271"></a></span>
+<span id="cb84-272"><a href="#cb84-272"></a><span class="fu">#### Part e {-}</span></span>
+<span id="cb84-273"><a href="#cb84-273"></a></span>
+<span id="cb84-274"><a href="#cb84-274"></a>::: {.callout-important title="Think then Run"}</span>
+<span id="cb84-275"><a href="#cb84-275"></a></span>
+<span id="cb84-276"><a href="#cb84-276"></a>BEFORE trying, what do you think will happen if you change the order of mutate and select:</span>
+<span id="cb84-277"><a href="#cb84-277"></a></span>
+<span id="cb84-278"><a href="#cb84-278"></a><span class="ss">2.   </span>we'll get an error, because we can't select a variable that hasn't been created yet.</span>
+<span id="cb84-279"><a href="#cb84-279"></a></span>
+<span id="cb84-280"><a href="#cb84-280"></a>:::</span>
+<span id="cb84-281"><a href="#cb84-281"></a></span>
+<span id="cb84-284"><a href="#cb84-284"></a><span class="in">```{r}</span></span>
+<span id="cb84-285"><a href="#cb84-285"></a><span class="co"># Now try it. Change the order of mutate and select below.</span></span>
+<span id="cb84-286"><a href="#cb84-286"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-287"><a href="#cb84-287"></a>  <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Delaware"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb84-288"><a href="#cb84-288"></a>  <span class="fu">mutate</span>(<span class="at">repub_win_20 =</span> repub_pct_20 <span class="sc">&gt;</span> dem_pct_20) <span class="sc">|&gt;</span></span>
+<span id="cb84-289"><a href="#cb84-289"></a>  <span class="fu">select</span>(county_name, repub_pct_20, dem_pct_20, repub_win_20)</span>
+<span id="cb84-290"><a href="#cb84-290"></a></span>
+<span id="cb84-291"><a href="#cb84-291"></a><span class="co"># The below code did not work because the variable county_name did not exist yet</span></span>
+<span id="cb84-292"><a href="#cb84-292"></a><span class="co"># elections_small |&gt;</span></span>
+<span id="cb84-293"><a href="#cb84-293"></a><span class="co">#   filter(state_name == "Delaware") |&gt;</span></span>
+<span id="cb84-294"><a href="#cb84-294"></a><span class="co">#   select(county_name, repub_pct_20, dem_pct_20, repub_win_20) |&gt;</span></span>
+<span id="cb84-295"><a href="#cb84-295"></a><span class="co">#   mutate(repub_win_20 = repub_pct_20 &gt; dem_pct_20)</span></span>
+<span id="cb84-296"><a href="#cb84-296"></a></span>
+<span id="cb84-297"><a href="#cb84-297"></a><span class="in">```</span></span>
 <span id="cb84-298"><a href="#cb84-298"></a></span>
 <span id="cb84-299"><a href="#cb84-299"></a></span>
-<span id="cb84-300"><a href="#cb84-300"></a><span class="fu">### Exercise 6: DIY Pipe Series {-}</span></span>
-<span id="cb84-301"><a href="#cb84-301"></a></span>
-<span id="cb84-302"><a href="#cb84-302"></a>We've now learned 4 of the 6 wrangling verbs: <span class="in">`select`</span>, <span class="in">`filter`</span>, <span class="in">`mutate`</span>, <span class="in">`arrange.`</span> Let's practice combining these into pipe series. Here are some hot tips:</span>
-<span id="cb84-303"><a href="#cb84-303"></a></span>
-<span id="cb84-304"><a href="#cb84-304"></a><span class="ss">-   </span>Before writing any code, translate the prompt: how many distinct wrangling steps are needed and what verb do we need in each step?</span>
-<span id="cb84-305"><a href="#cb84-305"></a><span class="ss">-   </span>Add each verb one at a time -- don't try writing a whole chunk at once.</span>
-<span id="cb84-306"><a href="#cb84-306"></a></span>
-<span id="cb84-307"><a href="#cb84-307"></a><span class="fu">#### Part a {-}</span></span>
-<span id="cb84-308"><a href="#cb84-308"></a></span>
-<span id="cb84-309"><a href="#cb84-309"></a>Show just the counties in Minnesota and their Democratic 2020 vote percentage, from highest to lowest. Your answer should have just 2 columns.</span>
-<span id="cb84-310"><a href="#cb84-310"></a></span>
-<span id="cb84-313"><a href="#cb84-313"></a><span class="in">```{r}</span></span>
-<span id="cb84-314"><a href="#cb84-314"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-315"><a href="#cb84-315"></a>  <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Minnesota"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb84-316"><a href="#cb84-316"></a>  <span class="fu">select</span>(county_name, dem_pct_20) <span class="sc">|&gt;</span></span>
-<span id="cb84-317"><a href="#cb84-317"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(dem_pct_20))</span>
-<span id="cb84-318"><a href="#cb84-318"></a></span>
-<span id="cb84-319"><a href="#cb84-319"></a><span class="in">```</span></span>
-<span id="cb84-320"><a href="#cb84-320"></a></span>
-<span id="cb84-321"><a href="#cb84-321"></a><span class="fu">#### Part b {-}</span></span>
-<span id="cb84-322"><a href="#cb84-322"></a></span>
-<span id="cb84-323"><a href="#cb84-323"></a>Create a new dataset named <span class="in">`mn_wi`</span> that sorts the counties in Minnesota and Wisconsin from lowest to highest in terms of the *change* in Democratic vote percentage in 2020 vs 2016. This dataset should include the following variables (and only these variables): <span class="in">`state_name`</span>, <span class="in">`county_name`</span>, <span class="in">`dem_pct_20`</span>, <span class="in">`dem_pct_16`</span>, and a variable measuring the change in Democratic vote percentage in 2020 vs 2016.</span>
-<span id="cb84-324"><a href="#cb84-324"></a></span>
-<span id="cb84-327"><a href="#cb84-327"></a><span class="in">```{r}</span></span>
-<span id="cb84-328"><a href="#cb84-328"></a><span class="co"># Define the dataset</span></span>
-<span id="cb84-329"><a href="#cb84-329"></a><span class="co"># Only store the results once you're confident that they're correct</span></span>
-<span id="cb84-330"><a href="#cb84-330"></a></span>
-<span id="cb84-331"><a href="#cb84-331"></a>mn_wi <span class="ot">&lt;-</span> elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-332"><a href="#cb84-332"></a>  <span class="fu">filter</span>(state_name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Minnesota"</span>, <span class="st">"Wisconsin"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb84-333"><a href="#cb84-333"></a>  <span class="fu">mutate</span>(<span class="at">dem_diff =</span> dem_pct_20 <span class="sc">-</span> dem_pct_16) <span class="sc">|&gt;</span></span>
-<span id="cb84-334"><a href="#cb84-334"></a>  <span class="fu">select</span>(state_name, county_name, dem_pct_20, dem_pct_16, dem_diff) <span class="sc">|&gt;</span></span>
-<span id="cb84-335"><a href="#cb84-335"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(dem_diff))</span>
-<span id="cb84-336"><a href="#cb84-336"></a></span>
+<span id="cb84-300"><a href="#cb84-300"></a></span>
+<span id="cb84-301"><a href="#cb84-301"></a><span class="fu">### Exercise 6: DIY Pipe Series {-}</span></span>
+<span id="cb84-302"><a href="#cb84-302"></a></span>
+<span id="cb84-303"><a href="#cb84-303"></a>We've now learned 4 of the 6 wrangling verbs: <span class="in">`select`</span>, <span class="in">`filter`</span>, <span class="in">`mutate`</span>, <span class="in">`arrange.`</span> Let's practice combining these into pipe series. Here are some hot tips:</span>
+<span id="cb84-304"><a href="#cb84-304"></a></span>
+<span id="cb84-305"><a href="#cb84-305"></a><span class="ss">-   </span>Before writing any code, translate the prompt: how many distinct wrangling steps are needed and what verb do we need in each step?</span>
+<span id="cb84-306"><a href="#cb84-306"></a><span class="ss">-   </span>Add each verb one at a time -- don't try writing a whole chunk at once.</span>
+<span id="cb84-307"><a href="#cb84-307"></a></span>
+<span id="cb84-308"><a href="#cb84-308"></a><span class="fu">#### Part a {-}</span></span>
+<span id="cb84-309"><a href="#cb84-309"></a></span>
+<span id="cb84-310"><a href="#cb84-310"></a>Show just the counties in Minnesota and their Democratic 2020 vote percentage, from highest to lowest. Your answer should have just 2 columns.</span>
+<span id="cb84-311"><a href="#cb84-311"></a></span>
+<span id="cb84-314"><a href="#cb84-314"></a><span class="in">```{r}</span></span>
+<span id="cb84-315"><a href="#cb84-315"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-316"><a href="#cb84-316"></a>  <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Minnesota"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb84-317"><a href="#cb84-317"></a>  <span class="fu">select</span>(county_name, dem_pct_20) <span class="sc">|&gt;</span></span>
+<span id="cb84-318"><a href="#cb84-318"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(dem_pct_20))</span>
+<span id="cb84-319"><a href="#cb84-319"></a></span>
+<span id="cb84-320"><a href="#cb84-320"></a><span class="in">```</span></span>
+<span id="cb84-321"><a href="#cb84-321"></a></span>
+<span id="cb84-322"><a href="#cb84-322"></a><span class="fu">#### Part b {-}</span></span>
+<span id="cb84-323"><a href="#cb84-323"></a></span>
+<span id="cb84-324"><a href="#cb84-324"></a>Create a new dataset named <span class="in">`mn_wi`</span> that sorts the counties in Minnesota and Wisconsin from lowest to highest in terms of the *change* in Democratic vote percentage in 2020 vs 2016. This dataset should include the following variables (and only these variables): <span class="in">`state_name`</span>, <span class="in">`county_name`</span>, <span class="in">`dem_pct_20`</span>, <span class="in">`dem_pct_16`</span>, and a variable measuring the change in Democratic vote percentage in 2020 vs 2016.</span>
+<span id="cb84-325"><a href="#cb84-325"></a></span>
+<span id="cb84-328"><a href="#cb84-328"></a><span class="in">```{r}</span></span>
+<span id="cb84-329"><a href="#cb84-329"></a><span class="co"># Define the dataset</span></span>
+<span id="cb84-330"><a href="#cb84-330"></a><span class="co"># Only store the results once you're confident that they're correct</span></span>
+<span id="cb84-331"><a href="#cb84-331"></a></span>
+<span id="cb84-332"><a href="#cb84-332"></a>mn_wi <span class="ot">&lt;-</span> elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-333"><a href="#cb84-333"></a>  <span class="fu">filter</span>(state_name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Minnesota"</span>, <span class="st">"Wisconsin"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb84-334"><a href="#cb84-334"></a>  <span class="fu">mutate</span>(<span class="at">dem_diff =</span> dem_pct_20 <span class="sc">-</span> dem_pct_16) <span class="sc">|&gt;</span></span>
+<span id="cb84-335"><a href="#cb84-335"></a>  <span class="fu">select</span>(state_name, county_name, dem_pct_20, dem_pct_16, dem_diff) <span class="sc">|&gt;</span></span>
+<span id="cb84-336"><a href="#cb84-336"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(dem_diff))</span>
 <span id="cb84-337"><a href="#cb84-337"></a></span>
-<span id="cb84-338"><a href="#cb84-338"></a><span class="co"># Check out the first 6 rows to confirm your results</span></span>
-<span id="cb84-339"><a href="#cb84-339"></a><span class="fu">head</span>(mn_wi)</span>
-<span id="cb84-340"><a href="#cb84-340"></a></span>
-<span id="cb84-341"><a href="#cb84-341"></a><span class="in">```</span></span>
-<span id="cb84-342"><a href="#cb84-342"></a></span>
-<span id="cb84-343"><a href="#cb84-343"></a><span class="fu">#### Part c {-}</span></span>
-<span id="cb84-344"><a href="#cb84-344"></a></span>
-<span id="cb84-345"><a href="#cb84-345"></a>Construct and discuss a plot of the county-level change in Democratic vote percent in 2020 vs 2016, and how this differs between Minnesota and Wisconsin. The plot below shows the change in Democratic support from 2016 to 2020 in Minnesota and Wisconsin respectively. The increase on average was noticeably higher in Minnesota between the two years, and both states had a positive median number of counties whose votes for democratic went up.</span>
-<span id="cb84-346"><a href="#cb84-346"></a></span>
-<span id="cb84-349"><a href="#cb84-349"></a><span class="in">```{r}</span></span>
-<span id="cb84-350"><a href="#cb84-350"></a><span class="fu">ggplot</span>(mn_wi, <span class="fu">aes</span>(<span class="at">y =</span> dem_diff)) <span class="sc">+</span></span>
-<span id="cb84-351"><a href="#cb84-351"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb84-352"><a href="#cb84-352"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>state_name)</span>
-<span id="cb84-353"><a href="#cb84-353"></a><span class="in">```</span></span>
-<span id="cb84-354"><a href="#cb84-354"></a></span>
+<span id="cb84-338"><a href="#cb84-338"></a></span>
+<span id="cb84-339"><a href="#cb84-339"></a><span class="co"># Check out the first 6 rows to confirm your results</span></span>
+<span id="cb84-340"><a href="#cb84-340"></a><span class="fu">head</span>(mn_wi)</span>
+<span id="cb84-341"><a href="#cb84-341"></a></span>
+<span id="cb84-342"><a href="#cb84-342"></a><span class="in">```</span></span>
+<span id="cb84-343"><a href="#cb84-343"></a></span>
+<span id="cb84-344"><a href="#cb84-344"></a><span class="fu">#### Part c {-}</span></span>
+<span id="cb84-345"><a href="#cb84-345"></a></span>
+<span id="cb84-346"><a href="#cb84-346"></a>Construct and discuss a plot of the county-level change in Democratic vote percent in 2020 vs 2016, and how this differs between Minnesota and Wisconsin. The plot below shows the change in Democratic support from 2016 to 2020 in Minnesota and Wisconsin respectively. The increase on average was noticeably higher in Minnesota between the two years, and both states had a positive median number of counties whose votes for democratic went up.</span>
+<span id="cb84-347"><a href="#cb84-347"></a></span>
+<span id="cb84-350"><a href="#cb84-350"></a><span class="in">```{r}</span></span>
+<span id="cb84-351"><a href="#cb84-351"></a><span class="fu">ggplot</span>(mn_wi, <span class="fu">aes</span>(<span class="at">y =</span> dem_diff)) <span class="sc">+</span></span>
+<span id="cb84-352"><a href="#cb84-352"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb84-353"><a href="#cb84-353"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>state_name)</span>
+<span id="cb84-354"><a href="#cb84-354"></a><span class="in">```</span></span>
 <span id="cb84-355"><a href="#cb84-355"></a></span>
 <span id="cb84-356"><a href="#cb84-356"></a></span>
-<span id="cb84-357"><a href="#cb84-357"></a><span class="fu">### Exercise 7: `summarize` Demo {-}</span></span>
-<span id="cb84-358"><a href="#cb84-358"></a></span>
-<span id="cb84-359"><a href="#cb84-359"></a>6 verbs: <span class="in">`select`</span>, <span class="in">`filter`</span>, <span class="in">`arrange`</span>, <span class="in">`mutate`</span>, <span class="in">`summarize`</span>, <span class="in">`group_by`</span></span>
-<span id="cb84-360"><a href="#cb84-360"></a></span>
-<span id="cb84-361"><a href="#cb84-361"></a>Let's talk about the last 2 verbs. <span class="in">`summarize()`</span> (or equivalently <span class="in">`summarise()`</span>) takes an entire data frame as input and outputs a single row with one or more summary statistics. For each chunk below, indicate what the code does.</span>
-<span id="cb84-362"><a href="#cb84-362"></a></span>
-<span id="cb84-365"><a href="#cb84-365"></a><span class="in">```{r}</span></span>
-<span id="cb84-366"><a href="#cb84-366"></a><span class="co"># What does this do? It gives the median value of the variable that we specify</span></span>
-<span id="cb84-367"><a href="#cb84-367"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-368"><a href="#cb84-368"></a>  <span class="fu">summarize</span>(<span class="fu">median</span>(repub_pct_20))</span>
-<span id="cb84-369"><a href="#cb84-369"></a><span class="in">```</span></span>
-<span id="cb84-370"><a href="#cb84-370"></a></span>
-<span id="cb84-373"><a href="#cb84-373"></a><span class="in">```{r}</span></span>
-<span id="cb84-374"><a href="#cb84-374"></a><span class="co"># What does this do? It creates a new variable that is the median of the republican counts overall</span></span>
-<span id="cb84-375"><a href="#cb84-375"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-376"><a href="#cb84-376"></a>  <span class="fu">summarize</span>(<span class="at">median_repub =</span> <span class="fu">median</span>(repub_pct_20))</span>
-<span id="cb84-377"><a href="#cb84-377"></a><span class="in">```</span></span>
-<span id="cb84-378"><a href="#cb84-378"></a></span>
-<span id="cb84-381"><a href="#cb84-381"></a><span class="in">```{r}</span></span>
-<span id="cb84-382"><a href="#cb84-382"></a><span class="co"># What does this do? It creates and displays two new variables, showing the median percentage of republican votes in each county as well as the total votes all together.</span></span>
-<span id="cb84-383"><a href="#cb84-383"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-384"><a href="#cb84-384"></a>  <span class="fu">summarize</span>(<span class="at">median_repub =</span> <span class="fu">median</span>(repub_pct_20), <span class="at">total_votes =</span> <span class="fu">sum</span>(total_votes_20))</span>
-<span id="cb84-385"><a href="#cb84-385"></a><span class="in">```</span></span>
-<span id="cb84-386"><a href="#cb84-386"></a></span>
+<span id="cb84-357"><a href="#cb84-357"></a></span>
+<span id="cb84-358"><a href="#cb84-358"></a><span class="fu">### Exercise 7: `summarize` Demo {-}</span></span>
+<span id="cb84-359"><a href="#cb84-359"></a></span>
+<span id="cb84-360"><a href="#cb84-360"></a>6 verbs: <span class="in">`select`</span>, <span class="in">`filter`</span>, <span class="in">`arrange`</span>, <span class="in">`mutate`</span>, <span class="in">`summarize`</span>, <span class="in">`group_by`</span></span>
+<span id="cb84-361"><a href="#cb84-361"></a></span>
+<span id="cb84-362"><a href="#cb84-362"></a>Let's talk about the last 2 verbs. <span class="in">`summarize()`</span> (or equivalently <span class="in">`summarise()`</span>) takes an entire data frame as input and outputs a single row with one or more summary statistics. For each chunk below, indicate what the code does.</span>
+<span id="cb84-363"><a href="#cb84-363"></a></span>
+<span id="cb84-366"><a href="#cb84-366"></a><span class="in">```{r}</span></span>
+<span id="cb84-367"><a href="#cb84-367"></a><span class="co"># What does this do? It gives the median value of the variable that we specify</span></span>
+<span id="cb84-368"><a href="#cb84-368"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-369"><a href="#cb84-369"></a>  <span class="fu">summarize</span>(<span class="fu">median</span>(repub_pct_20))</span>
+<span id="cb84-370"><a href="#cb84-370"></a><span class="in">```</span></span>
+<span id="cb84-371"><a href="#cb84-371"></a></span>
+<span id="cb84-374"><a href="#cb84-374"></a><span class="in">```{r}</span></span>
+<span id="cb84-375"><a href="#cb84-375"></a><span class="co"># What does this do? It creates a new variable that is the median of the republican counts overall</span></span>
+<span id="cb84-376"><a href="#cb84-376"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-377"><a href="#cb84-377"></a>  <span class="fu">summarize</span>(<span class="at">median_repub =</span> <span class="fu">median</span>(repub_pct_20))</span>
+<span id="cb84-378"><a href="#cb84-378"></a><span class="in">```</span></span>
+<span id="cb84-379"><a href="#cb84-379"></a></span>
+<span id="cb84-382"><a href="#cb84-382"></a><span class="in">```{r}</span></span>
+<span id="cb84-383"><a href="#cb84-383"></a><span class="co"># What does this do? It creates and displays two new variables, showing the median percentage of republican votes in each county as well as the total votes all together.</span></span>
+<span id="cb84-384"><a href="#cb84-384"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-385"><a href="#cb84-385"></a>  <span class="fu">summarize</span>(<span class="at">median_repub =</span> <span class="fu">median</span>(repub_pct_20), <span class="at">total_votes =</span> <span class="fu">sum</span>(total_votes_20))</span>
+<span id="cb84-386"><a href="#cb84-386"></a><span class="in">```</span></span>
 <span id="cb84-387"><a href="#cb84-387"></a></span>
 <span id="cb84-388"><a href="#cb84-388"></a></span>
-<span id="cb84-389"><a href="#cb84-389"></a><span class="fu">### Exercise 8: `summarize` + `group_by` demo {-}</span></span>
-<span id="cb84-390"><a href="#cb84-390"></a></span>
+<span id="cb84-389"><a href="#cb84-389"></a></span>
+<span id="cb84-390"><a href="#cb84-390"></a><span class="fu">### Exercise 8: `summarize` + `group_by` demo {-}</span></span>
 <span id="cb84-391"><a href="#cb84-391"></a></span>
-<span id="cb84-392"><a href="#cb84-392"></a>Finally, <span class="in">`group_by()`</span> groups the units of observation or rows of a data frame by a specified set of variables. Alone, this function doesn't change the appearance of our dataset or seem to do anything at all:</span>
-<span id="cb84-393"><a href="#cb84-393"></a></span>
-<span id="cb84-396"><a href="#cb84-396"></a><span class="in">```{r}</span></span>
-<span id="cb84-397"><a href="#cb84-397"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-398"><a href="#cb84-398"></a>  <span class="fu">group_by</span>(state_name)</span>
-<span id="cb84-399"><a href="#cb84-399"></a><span class="in">```</span></span>
-<span id="cb84-400"><a href="#cb84-400"></a></span>
-<span id="cb84-401"><a href="#cb84-401"></a>Though it does change the underlying structure of the dataset:</span>
-<span id="cb84-402"><a href="#cb84-402"></a></span>
-<span id="cb84-405"><a href="#cb84-405"></a><span class="in">```{r}</span></span>
-<span id="cb84-406"><a href="#cb84-406"></a><span class="co">#Check out the structure before and after group_by</span></span>
-<span id="cb84-407"><a href="#cb84-407"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-408"><a href="#cb84-408"></a>  <span class="fu">class</span>()</span>
-<span id="cb84-409"><a href="#cb84-409"></a></span>
-<span id="cb84-410"><a href="#cb84-410"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-411"><a href="#cb84-411"></a>  <span class="fu">group_by</span>(state_name) <span class="sc">|&gt;</span></span>
-<span id="cb84-412"><a href="#cb84-412"></a>  <span class="fu">class</span>()</span>
-<span id="cb84-413"><a href="#cb84-413"></a><span class="in">```</span></span>
-<span id="cb84-414"><a href="#cb84-414"></a></span>
-<span id="cb84-415"><a href="#cb84-415"></a>Where it really shines is in partnership with <span class="in">`summarize()`</span>.</span>
-<span id="cb84-416"><a href="#cb84-416"></a></span>
-<span id="cb84-419"><a href="#cb84-419"></a><span class="in">```{r}</span></span>
-<span id="cb84-420"><a href="#cb84-420"></a><span class="co"># What does this do?</span></span>
-<span id="cb84-421"><a href="#cb84-421"></a><span class="co"># (What if we didn't use group_by?)</span></span>
-<span id="cb84-422"><a href="#cb84-422"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-423"><a href="#cb84-423"></a>  <span class="fu">group_by</span>(state_name) <span class="sc">|&gt;</span></span>
-<span id="cb84-424"><a href="#cb84-424"></a>  <span class="fu">summarize</span>(<span class="at">median_repub =</span> <span class="fu">median</span>(repub_pct_20), <span class="at">total_votes =</span> <span class="fu">sum</span>(total_votes_20))</span>
-<span id="cb84-425"><a href="#cb84-425"></a><span class="in">```</span></span>
-<span id="cb84-426"><a href="#cb84-426"></a></span>
-<span id="cb84-427"><a href="#cb84-427"></a>::: {.callout-warning title="Reflect"}</span>
-<span id="cb84-428"><a href="#cb84-428"></a></span>
-<span id="cb84-429"><a href="#cb84-429"></a>Notice that <span class="in">`group_by()`</span> with <span class="in">`summarize()`</span> produces new data frame or tibble! But the units of observation are now states instead of counties within states.</span>
-<span id="cb84-430"><a href="#cb84-430"></a></span>
-<span id="cb84-431"><a href="#cb84-431"></a>:::</span>
-<span id="cb84-432"><a href="#cb84-432"></a></span>
+<span id="cb84-392"><a href="#cb84-392"></a></span>
+<span id="cb84-393"><a href="#cb84-393"></a>Finally, <span class="in">`group_by()`</span> groups the units of observation or rows of a data frame by a specified set of variables. Alone, this function doesn't change the appearance of our dataset or seem to do anything at all:</span>
+<span id="cb84-394"><a href="#cb84-394"></a></span>
+<span id="cb84-397"><a href="#cb84-397"></a><span class="in">```{r}</span></span>
+<span id="cb84-398"><a href="#cb84-398"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-399"><a href="#cb84-399"></a>  <span class="fu">group_by</span>(state_name)</span>
+<span id="cb84-400"><a href="#cb84-400"></a><span class="in">```</span></span>
+<span id="cb84-401"><a href="#cb84-401"></a></span>
+<span id="cb84-402"><a href="#cb84-402"></a>Though it does change the underlying structure of the dataset:</span>
+<span id="cb84-403"><a href="#cb84-403"></a></span>
+<span id="cb84-406"><a href="#cb84-406"></a><span class="in">```{r}</span></span>
+<span id="cb84-407"><a href="#cb84-407"></a><span class="co">#Check out the structure before and after group_by</span></span>
+<span id="cb84-408"><a href="#cb84-408"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-409"><a href="#cb84-409"></a>  <span class="fu">class</span>()</span>
+<span id="cb84-410"><a href="#cb84-410"></a></span>
+<span id="cb84-411"><a href="#cb84-411"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-412"><a href="#cb84-412"></a>  <span class="fu">group_by</span>(state_name) <span class="sc">|&gt;</span></span>
+<span id="cb84-413"><a href="#cb84-413"></a>  <span class="fu">class</span>()</span>
+<span id="cb84-414"><a href="#cb84-414"></a><span class="in">```</span></span>
+<span id="cb84-415"><a href="#cb84-415"></a></span>
+<span id="cb84-416"><a href="#cb84-416"></a>Where it really shines is in partnership with <span class="in">`summarize()`</span>.</span>
+<span id="cb84-417"><a href="#cb84-417"></a></span>
+<span id="cb84-420"><a href="#cb84-420"></a><span class="in">```{r}</span></span>
+<span id="cb84-421"><a href="#cb84-421"></a><span class="co"># What does this do?</span></span>
+<span id="cb84-422"><a href="#cb84-422"></a><span class="co"># (What if we didn't use group_by?)</span></span>
+<span id="cb84-423"><a href="#cb84-423"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-424"><a href="#cb84-424"></a>  <span class="fu">group_by</span>(state_name) <span class="sc">|&gt;</span></span>
+<span id="cb84-425"><a href="#cb84-425"></a>  <span class="fu">summarize</span>(<span class="at">median_repub =</span> <span class="fu">median</span>(repub_pct_20), <span class="at">total_votes =</span> <span class="fu">sum</span>(total_votes_20))</span>
+<span id="cb84-426"><a href="#cb84-426"></a><span class="in">```</span></span>
+<span id="cb84-427"><a href="#cb84-427"></a></span>
+<span id="cb84-428"><a href="#cb84-428"></a>::: {.callout-warning title="Reflect"}</span>
+<span id="cb84-429"><a href="#cb84-429"></a></span>
+<span id="cb84-430"><a href="#cb84-430"></a>Notice that <span class="in">`group_by()`</span> with <span class="in">`summarize()`</span> produces new data frame or tibble! But the units of observation are now states instead of counties within states.</span>
+<span id="cb84-431"><a href="#cb84-431"></a></span>
+<span id="cb84-432"><a href="#cb84-432"></a>:::</span>
 <span id="cb84-433"><a href="#cb84-433"></a></span>
 <span id="cb84-434"><a href="#cb84-434"></a></span>
-<span id="cb84-435"><a href="#cb84-435"></a><span class="fu">### Exercise 9: DIY {-}</span></span>
-<span id="cb84-436"><a href="#cb84-436"></a></span>
-<span id="cb84-437"><a href="#cb84-437"></a>Let's practice (some of) our 6 verbs: <span class="in">`select`</span>, <span class="in">`filter`</span>, <span class="in">`arrange`</span>, <span class="in">`mutate`</span>, <span class="in">`summarize`</span>, <span class="in">`group_by`</span> Remember:</span>
-<span id="cb84-438"><a href="#cb84-438"></a></span>
-<span id="cb84-439"><a href="#cb84-439"></a><span class="ss">-   </span>Before writing any code, translate the given prompts: how many distinct wrangling steps are needed and what verb do we need in each step?</span>
-<span id="cb84-440"><a href="#cb84-440"></a><span class="ss">-   </span>Add each verb one at a time.</span>
-<span id="cb84-441"><a href="#cb84-441"></a></span>
-<span id="cb84-442"><a href="#cb84-442"></a><span class="fu">#### Part a {-}</span></span>
-<span id="cb84-443"><a href="#cb84-443"></a></span>
-<span id="cb84-444"><a href="#cb84-444"></a>NOTE: Part a is a challenge exercise. If you get really stuck, move on to Part b which is the same overall question, but with hints.</span>
-<span id="cb84-445"><a href="#cb84-445"></a></span>
-<span id="cb84-448"><a href="#cb84-448"></a><span class="in">```{r}</span></span>
-<span id="cb84-449"><a href="#cb84-449"></a><span class="co"># Sort the *states* from the most to least total votes cast in 2020</span></span>
-<span id="cb84-450"><a href="#cb84-450"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-451"><a href="#cb84-451"></a>  <span class="fu">group_by</span>(state_name) <span class="sc">|&gt;</span></span>
-<span id="cb84-452"><a href="#cb84-452"></a>  <span class="fu">summarize</span>(<span class="at">votes2020 =</span> <span class="fu">sum</span>(total_votes_20)) <span class="sc">|&gt;</span></span>
-<span id="cb84-453"><a href="#cb84-453"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(votes2020))</span>
-<span id="cb84-454"><a href="#cb84-454"></a></span>
-<span id="cb84-455"><a href="#cb84-455"></a><span class="in">```</span></span>
-<span id="cb84-456"><a href="#cb84-456"></a></span>
-<span id="cb84-459"><a href="#cb84-459"></a><span class="in">```{r}</span></span>
-<span id="cb84-460"><a href="#cb84-460"></a><span class="co"># In 2020, what were the total number of votes for the Democratic candidate and the total number of votes for the Republican candidate in each *state*?</span></span>
-<span id="cb84-461"><a href="#cb84-461"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-462"><a href="#cb84-462"></a>  <span class="fu">group_by</span>(state_name) <span class="sc">|&gt;</span></span>
-<span id="cb84-463"><a href="#cb84-463"></a>  <span class="fu">summarize</span>(<span class="at">repubVotes2020 =</span> <span class="fu">sum</span>(repub_pct_20 <span class="sc">*</span> total_votes_20), <span class="at">demVotes2020 =</span> <span class="fu">sum</span>(dem_pct_20 <span class="sc">*</span> total_votes_20))</span>
-<span id="cb84-464"><a href="#cb84-464"></a></span>
+<span id="cb84-435"><a href="#cb84-435"></a></span>
+<span id="cb84-436"><a href="#cb84-436"></a><span class="fu">### Exercise 9: DIY {-}</span></span>
+<span id="cb84-437"><a href="#cb84-437"></a></span>
+<span id="cb84-438"><a href="#cb84-438"></a>Let's practice (some of) our 6 verbs: <span class="in">`select`</span>, <span class="in">`filter`</span>, <span class="in">`arrange`</span>, <span class="in">`mutate`</span>, <span class="in">`summarize`</span>, <span class="in">`group_by`</span> Remember:</span>
+<span id="cb84-439"><a href="#cb84-439"></a></span>
+<span id="cb84-440"><a href="#cb84-440"></a><span class="ss">-   </span>Before writing any code, translate the given prompts: how many distinct wrangling steps are needed and what verb do we need in each step?</span>
+<span id="cb84-441"><a href="#cb84-441"></a><span class="ss">-   </span>Add each verb one at a time.</span>
+<span id="cb84-442"><a href="#cb84-442"></a></span>
+<span id="cb84-443"><a href="#cb84-443"></a><span class="fu">#### Part a {-}</span></span>
+<span id="cb84-444"><a href="#cb84-444"></a></span>
+<span id="cb84-445"><a href="#cb84-445"></a>NOTE: Part a is a challenge exercise. If you get really stuck, move on to Part b which is the same overall question, but with hints.</span>
+<span id="cb84-446"><a href="#cb84-446"></a></span>
+<span id="cb84-449"><a href="#cb84-449"></a><span class="in">```{r}</span></span>
+<span id="cb84-450"><a href="#cb84-450"></a><span class="co"># Sort the *states* from the most to least total votes cast in 2020</span></span>
+<span id="cb84-451"><a href="#cb84-451"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-452"><a href="#cb84-452"></a>  <span class="fu">group_by</span>(state_name) <span class="sc">|&gt;</span></span>
+<span id="cb84-453"><a href="#cb84-453"></a>  <span class="fu">summarize</span>(<span class="at">votes2020 =</span> <span class="fu">sum</span>(total_votes_20)) <span class="sc">|&gt;</span></span>
+<span id="cb84-454"><a href="#cb84-454"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(votes2020))</span>
+<span id="cb84-455"><a href="#cb84-455"></a></span>
+<span id="cb84-456"><a href="#cb84-456"></a><span class="in">```</span></span>
+<span id="cb84-457"><a href="#cb84-457"></a></span>
+<span id="cb84-460"><a href="#cb84-460"></a><span class="in">```{r}</span></span>
+<span id="cb84-461"><a href="#cb84-461"></a><span class="co"># In 2020, what were the total number of votes for the Democratic candidate and the total number of votes for the Republican candidate in each *state*?</span></span>
+<span id="cb84-462"><a href="#cb84-462"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-463"><a href="#cb84-463"></a>  <span class="fu">group_by</span>(state_name) <span class="sc">|&gt;</span></span>
+<span id="cb84-464"><a href="#cb84-464"></a>  <span class="fu">summarize</span>(<span class="at">repubVotes2020 =</span> <span class="fu">sum</span>(repub_pct_20 <span class="sc">*</span> total_votes_20), <span class="at">demVotes2020 =</span> <span class="fu">sum</span>(dem_pct_20 <span class="sc">*</span> total_votes_20))</span>
 <span id="cb84-465"><a href="#cb84-465"></a></span>
-<span id="cb84-466"><a href="#cb84-466"></a><span class="in">```</span></span>
-<span id="cb84-467"><a href="#cb84-467"></a></span>
-<span id="cb84-470"><a href="#cb84-470"></a><span class="in">```{r}</span></span>
-<span id="cb84-471"><a href="#cb84-471"></a><span class="co"># What states did the Democratic candidate win in 2020?</span></span>
-<span id="cb84-472"><a href="#cb84-472"></a>elections_small <span class="sc">|&gt;</span></span>
-<span id="cb84-473"><a href="#cb84-473"></a>  <span class="fu">group_by</span>(state_name) <span class="sc">|&gt;</span></span>
-<span id="cb84-474"><a href="#cb84-474"></a>  <span class="fu">summarize</span>(<span class="at">repubVotes2020 =</span> <span class="fu">sum</span>(repub_pct_20 <span class="sc">*</span> total_votes_20), <span class="at">demVotes2020 =</span> <span class="fu">sum</span>(dem_pct_20 <span class="sc">*</span> total_votes_20)) <span class="sc">|&gt;</span></span>
-<span id="cb84-475"><a href="#cb84-475"></a>  <span class="fu">mutate</span>(<span class="at">dem_win_20 =</span> demVotes2020 <span class="sc">&gt;</span> repubVotes2020) <span class="sc">|&gt;</span></span>
-<span id="cb84-476"><a href="#cb84-476"></a>  <span class="fu">filter</span>(dem_win_20 <span class="sc">==</span> <span class="cn">TRUE</span>)</span>
-<span id="cb84-477"><a href="#cb84-477"></a></span>
-<span id="cb84-478"><a href="#cb84-478"></a><span class="in">```</span></span>
-<span id="cb84-479"><a href="#cb84-479"></a></span>
-<span id="cb84-480"><a href="#cb84-480"></a><span class="fu">#### Part b {-}</span></span>
-<span id="cb84-481"><a href="#cb84-481"></a></span>
-<span id="cb84-484"><a href="#cb84-484"></a><span class="in">```{r}</span></span>
-<span id="cb84-485"><a href="#cb84-485"></a><span class="co"># Sort the states from the most to least total votes cast in 2020</span></span>
-<span id="cb84-486"><a href="#cb84-486"></a><span class="co"># HINT: Calculate the total number of votes in each state, then sort</span></span>
-<span id="cb84-487"><a href="#cb84-487"></a><span class="co">#COMPLETED IN PART A</span></span>
-<span id="cb84-488"><a href="#cb84-488"></a></span>
-<span id="cb84-489"><a href="#cb84-489"></a><span class="in">```</span></span>
-<span id="cb84-490"><a href="#cb84-490"></a></span>
-<span id="cb84-493"><a href="#cb84-493"></a><span class="in">```{r}</span></span>
-<span id="cb84-494"><a href="#cb84-494"></a><span class="co"># In 2020, what were the total number of votes for the Democratic candidate and the total number of votes for the Republican candidate in each state?</span></span>
-<span id="cb84-495"><a href="#cb84-495"></a><span class="co"># HINT: First calculate the number of Dem and Repub votes in each *county*</span></span>
-<span id="cb84-496"><a href="#cb84-496"></a><span class="co"># Then group and summarize these by state</span></span>
-<span id="cb84-497"><a href="#cb84-497"></a><span class="co">#COMPLETED IN PART A</span></span>
-<span id="cb84-498"><a href="#cb84-498"></a></span>
-<span id="cb84-499"><a href="#cb84-499"></a><span class="in">```</span></span>
-<span id="cb84-500"><a href="#cb84-500"></a></span>
-<span id="cb84-503"><a href="#cb84-503"></a><span class="in">```{r}</span></span>
-<span id="cb84-504"><a href="#cb84-504"></a><span class="co"># What states did the Democratic candidate win in 2020?</span></span>
-<span id="cb84-505"><a href="#cb84-505"></a><span class="co"># HINT: Start with the results from the previous chunk, and then keep only some rows</span></span>
-<span id="cb84-506"><a href="#cb84-506"></a><span class="co">#COMPLETED IN PART A</span></span>
-<span id="cb84-507"><a href="#cb84-507"></a></span>
-<span id="cb84-508"><a href="#cb84-508"></a><span class="in">```</span></span>
-<span id="cb84-509"><a href="#cb84-509"></a></span>
+<span id="cb84-466"><a href="#cb84-466"></a></span>
+<span id="cb84-467"><a href="#cb84-467"></a><span class="in">```</span></span>
+<span id="cb84-468"><a href="#cb84-468"></a></span>
+<span id="cb84-471"><a href="#cb84-471"></a><span class="in">```{r}</span></span>
+<span id="cb84-472"><a href="#cb84-472"></a><span class="co"># What states did the Democratic candidate win in 2020?</span></span>
+<span id="cb84-473"><a href="#cb84-473"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb84-474"><a href="#cb84-474"></a>  <span class="fu">group_by</span>(state_name) <span class="sc">|&gt;</span></span>
+<span id="cb84-475"><a href="#cb84-475"></a>  <span class="fu">summarize</span>(<span class="at">repubVotes2020 =</span> <span class="fu">sum</span>(repub_pct_20 <span class="sc">*</span> total_votes_20), <span class="at">demVotes2020 =</span> <span class="fu">sum</span>(dem_pct_20 <span class="sc">*</span> total_votes_20)) <span class="sc">|&gt;</span></span>
+<span id="cb84-476"><a href="#cb84-476"></a>  <span class="fu">mutate</span>(<span class="at">dem_win_20 =</span> demVotes2020 <span class="sc">&gt;</span> repubVotes2020) <span class="sc">|&gt;</span></span>
+<span id="cb84-477"><a href="#cb84-477"></a>  <span class="fu">filter</span>(dem_win_20 <span class="sc">==</span> <span class="cn">TRUE</span>)</span>
+<span id="cb84-478"><a href="#cb84-478"></a></span>
+<span id="cb84-479"><a href="#cb84-479"></a><span class="in">```</span></span>
+<span id="cb84-480"><a href="#cb84-480"></a></span>
+<span id="cb84-481"><a href="#cb84-481"></a><span class="fu">#### Part b {-}</span></span>
+<span id="cb84-482"><a href="#cb84-482"></a></span>
+<span id="cb84-485"><a href="#cb84-485"></a><span class="in">```{r}</span></span>
+<span id="cb84-486"><a href="#cb84-486"></a><span class="co"># Sort the states from the most to least total votes cast in 2020</span></span>
+<span id="cb84-487"><a href="#cb84-487"></a><span class="co"># HINT: Calculate the total number of votes in each state, then sort</span></span>
+<span id="cb84-488"><a href="#cb84-488"></a><span class="co">#COMPLETED IN PART A</span></span>
+<span id="cb84-489"><a href="#cb84-489"></a></span>
+<span id="cb84-490"><a href="#cb84-490"></a><span class="in">```</span></span>
+<span id="cb84-491"><a href="#cb84-491"></a></span>
+<span id="cb84-494"><a href="#cb84-494"></a><span class="in">```{r}</span></span>
+<span id="cb84-495"><a href="#cb84-495"></a><span class="co"># In 2020, what were the total number of votes for the Democratic candidate and the total number of votes for the Republican candidate in each state?</span></span>
+<span id="cb84-496"><a href="#cb84-496"></a><span class="co"># HINT: First calculate the number of Dem and Repub votes in each *county*</span></span>
+<span id="cb84-497"><a href="#cb84-497"></a><span class="co"># Then group and summarize these by state</span></span>
+<span id="cb84-498"><a href="#cb84-498"></a><span class="co">#COMPLETED IN PART A</span></span>
+<span id="cb84-499"><a href="#cb84-499"></a></span>
+<span id="cb84-500"><a href="#cb84-500"></a><span class="in">```</span></span>
+<span id="cb84-501"><a href="#cb84-501"></a></span>
+<span id="cb84-504"><a href="#cb84-504"></a><span class="in">```{r}</span></span>
+<span id="cb84-505"><a href="#cb84-505"></a><span class="co"># What states did the Democratic candidate win in 2020?</span></span>
+<span id="cb84-506"><a href="#cb84-506"></a><span class="co"># HINT: Start with the results from the previous chunk, and then keep only some rows</span></span>
+<span id="cb84-507"><a href="#cb84-507"></a><span class="co">#COMPLETED IN PART A</span></span>
+<span id="cb84-508"><a href="#cb84-508"></a></span>
+<span id="cb84-509"><a href="#cb84-509"></a><span class="in">```</span></span>
 <span id="cb84-510"><a href="#cb84-510"></a></span>
 <span id="cb84-511"><a href="#cb84-511"></a></span>
-<span id="cb84-512"><a href="#cb84-512"></a><span class="fu">### Exercise 10: Practice on New Data {-}</span></span>
-<span id="cb84-513"><a href="#cb84-513"></a></span>
-<span id="cb84-514"><a href="#cb84-514"></a>Recall the World Cup football/soccer data from TidyTuesday:</span>
-<span id="cb84-515"><a href="#cb84-515"></a></span>
-<span id="cb84-518"><a href="#cb84-518"></a><span class="in">```{r}</span></span>
-<span id="cb84-519"><a href="#cb84-519"></a>world_cup <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-11-29/worldcups.csv"</span>)</span>
-<span id="cb84-520"><a href="#cb84-520"></a><span class="in">```</span></span>
-<span id="cb84-521"><a href="#cb84-521"></a></span>
-<span id="cb84-522"><a href="#cb84-522"></a>You can find a codebook <span class="co">[</span><span class="ot">here</span><span class="co">](https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-11-29)</span>. Use (some of) our 6 verbs (<span class="in">`select`</span>, <span class="in">`filter`</span>, <span class="in">`arrange`</span>, <span class="in">`mutate`</span>, <span class="in">`summarize`</span>, <span class="in">`group_by`</span>) and data viz to address the following prompts.</span>
-<span id="cb84-523"><a href="#cb84-523"></a></span>
-<span id="cb84-526"><a href="#cb84-526"></a><span class="in">```{r}</span></span>
-<span id="cb84-527"><a href="#cb84-527"></a><span class="co"># In what years did Brazil win the World Cup?</span></span>
-<span id="cb84-528"><a href="#cb84-528"></a>world_cup <span class="sc">|&gt;</span></span>
-<span id="cb84-529"><a href="#cb84-529"></a>  <span class="fu">filter</span>(winner <span class="sc">==</span> <span class="st">"Brazil"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb84-530"><a href="#cb84-530"></a>  <span class="fu">select</span>(<span class="at">Years_Brazil_Won =</span> year)</span>
-<span id="cb84-531"><a href="#cb84-531"></a></span>
-<span id="cb84-532"><a href="#cb84-532"></a><span class="in">```</span></span>
-<span id="cb84-533"><a href="#cb84-533"></a></span>
-<span id="cb84-536"><a href="#cb84-536"></a><span class="in">```{r}</span></span>
-<span id="cb84-537"><a href="#cb84-537"></a><span class="co"># What were the 6 World Cups with the highest attendance?</span></span>
-<span id="cb84-538"><a href="#cb84-538"></a>world_cup <span class="sc">|&gt;</span></span>
-<span id="cb84-539"><a href="#cb84-539"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(attendance)) <span class="sc">|&gt;</span></span>
-<span id="cb84-540"><a href="#cb84-540"></a>  <span class="fu">head</span>(<span class="dv">6</span>)</span>
-<span id="cb84-541"><a href="#cb84-541"></a></span>
-<span id="cb84-542"><a href="#cb84-542"></a><span class="in">```</span></span>
-<span id="cb84-543"><a href="#cb84-543"></a></span>
-<span id="cb84-546"><a href="#cb84-546"></a><span class="in">```{r}</span></span>
-<span id="cb84-547"><a href="#cb84-547"></a><span class="co"># Construct a univariate plot of goals_scored (no wrangling necessary)</span></span>
-<span id="cb84-548"><a href="#cb84-548"></a><span class="co"># This provides a visual summary of how the number of goals_scored varies from World Cup to World Cup</span></span>
-<span id="cb84-549"><a href="#cb84-549"></a><span class="fu">ggplot</span>(world_cup, <span class="fu">aes</span>(<span class="at">x =</span> goals_scored)) <span class="sc">+</span> </span>
-<span id="cb84-550"><a href="#cb84-550"></a>  <span class="fu">geom_bar</span>()</span>
-<span id="cb84-551"><a href="#cb84-551"></a></span>
-<span id="cb84-552"><a href="#cb84-552"></a><span class="in">```</span></span>
-<span id="cb84-553"><a href="#cb84-553"></a></span>
-<span id="cb84-556"><a href="#cb84-556"></a><span class="in">```{r}</span></span>
-<span id="cb84-557"><a href="#cb84-557"></a><span class="co"># Let's follow up the plot with some more precise numerical summaries</span></span>
-<span id="cb84-558"><a href="#cb84-558"></a><span class="co"># Calculate the min, median, and max number of goals_scored across all World Cups</span></span>
-<span id="cb84-559"><a href="#cb84-559"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: Visually compare these numerical summaries to what you observed in the plot</span></span>
-<span id="cb84-560"><a href="#cb84-560"></a>world_cup <span class="sc">|&gt;</span></span>
-<span id="cb84-561"><a href="#cb84-561"></a>  <span class="fu">summarize</span>(<span class="fu">min</span>(goals_scored), <span class="fu">max</span>(goals_scored), <span class="fu">median</span>(goals_scored))</span>
-<span id="cb84-562"><a href="#cb84-562"></a></span>
-<span id="cb84-563"><a href="#cb84-563"></a><span class="in">```</span></span>
-<span id="cb84-564"><a href="#cb84-564"></a></span>
-<span id="cb84-567"><a href="#cb84-567"></a><span class="in">```{r}</span></span>
-<span id="cb84-568"><a href="#cb84-568"></a><span class="co"># Construct a bivariate plot of how the number of goals_scored in the World Cup has changed over the years</span></span>
-<span id="cb84-569"><a href="#cb84-569"></a><span class="co"># No wrangling necessary</span></span>
-<span id="cb84-570"><a href="#cb84-570"></a><span class="fu">ggplot</span>(world_cup, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> goals_scored)) <span class="sc">+</span></span>
-<span id="cb84-571"><a href="#cb84-571"></a>  <span class="fu">geom_line</span>()</span>
-<span id="cb84-572"><a href="#cb84-572"></a></span>
-<span id="cb84-573"><a href="#cb84-573"></a><span class="in">```</span></span>
-<span id="cb84-574"><a href="#cb84-574"></a></span>
-<span id="cb84-577"><a href="#cb84-577"></a><span class="in">```{r}</span></span>
-<span id="cb84-578"><a href="#cb84-578"></a><span class="co"># Our above summaries might be a bit misleading.</span></span>
-<span id="cb84-579"><a href="#cb84-579"></a><span class="co"># The number of games played at the World Cup varies.</span></span>
-<span id="cb84-580"><a href="#cb84-580"></a><span class="co"># Construct a bivariate plot of how the typical number of goals per game has changed over the years</span></span>
-<span id="cb84-581"><a href="#cb84-581"></a>world_cup <span class="sc">|&gt;</span></span>
-<span id="cb84-582"><a href="#cb84-582"></a>  <span class="fu">mutate</span>(<span class="at">goals_per_game =</span> goals_scored<span class="sc">/</span>games) <span class="sc">|&gt;</span></span>
-<span id="cb84-583"><a href="#cb84-583"></a>  <span class="fu">ggplot</span>( <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> goals_per_game)) <span class="sc">+</span></span>
-<span id="cb84-584"><a href="#cb84-584"></a>  <span class="fu">geom_line</span>()</span>
-<span id="cb84-585"><a href="#cb84-585"></a></span>
-<span id="cb84-586"><a href="#cb84-586"></a><span class="in">```</span></span>
-<span id="cb84-587"><a href="#cb84-587"></a></span>
+<span id="cb84-512"><a href="#cb84-512"></a></span>
+<span id="cb84-513"><a href="#cb84-513"></a><span class="fu">### Exercise 10: Practice on New Data {-}</span></span>
+<span id="cb84-514"><a href="#cb84-514"></a></span>
+<span id="cb84-515"><a href="#cb84-515"></a>Recall the World Cup football/soccer data from TidyTuesday:</span>
+<span id="cb84-516"><a href="#cb84-516"></a></span>
+<span id="cb84-519"><a href="#cb84-519"></a><span class="in">```{r}</span></span>
+<span id="cb84-520"><a href="#cb84-520"></a>world_cup <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-11-29/worldcups.csv"</span>)</span>
+<span id="cb84-521"><a href="#cb84-521"></a><span class="in">```</span></span>
+<span id="cb84-522"><a href="#cb84-522"></a></span>
+<span id="cb84-523"><a href="#cb84-523"></a>You can find a codebook <span class="co">[</span><span class="ot">here</span><span class="co">](https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-11-29)</span>. Use (some of) our 6 verbs (<span class="in">`select`</span>, <span class="in">`filter`</span>, <span class="in">`arrange`</span>, <span class="in">`mutate`</span>, <span class="in">`summarize`</span>, <span class="in">`group_by`</span>) and data viz to address the following prompts.</span>
+<span id="cb84-524"><a href="#cb84-524"></a></span>
+<span id="cb84-527"><a href="#cb84-527"></a><span class="in">```{r}</span></span>
+<span id="cb84-528"><a href="#cb84-528"></a><span class="co"># In what years did Brazil win the World Cup?</span></span>
+<span id="cb84-529"><a href="#cb84-529"></a>world_cup <span class="sc">|&gt;</span></span>
+<span id="cb84-530"><a href="#cb84-530"></a>  <span class="fu">filter</span>(winner <span class="sc">==</span> <span class="st">"Brazil"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb84-531"><a href="#cb84-531"></a>  <span class="fu">select</span>(<span class="at">Years_Brazil_Won =</span> year)</span>
+<span id="cb84-532"><a href="#cb84-532"></a></span>
+<span id="cb84-533"><a href="#cb84-533"></a><span class="in">```</span></span>
+<span id="cb84-534"><a href="#cb84-534"></a></span>
+<span id="cb84-537"><a href="#cb84-537"></a><span class="in">```{r}</span></span>
+<span id="cb84-538"><a href="#cb84-538"></a><span class="co"># What were the 6 World Cups with the highest attendance?</span></span>
+<span id="cb84-539"><a href="#cb84-539"></a>world_cup <span class="sc">|&gt;</span></span>
+<span id="cb84-540"><a href="#cb84-540"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(attendance)) <span class="sc">|&gt;</span></span>
+<span id="cb84-541"><a href="#cb84-541"></a>  <span class="fu">head</span>(<span class="dv">6</span>)</span>
+<span id="cb84-542"><a href="#cb84-542"></a></span>
+<span id="cb84-543"><a href="#cb84-543"></a><span class="in">```</span></span>
+<span id="cb84-544"><a href="#cb84-544"></a></span>
+<span id="cb84-547"><a href="#cb84-547"></a><span class="in">```{r}</span></span>
+<span id="cb84-548"><a href="#cb84-548"></a><span class="co"># Construct a univariate plot of goals_scored (no wrangling necessary)</span></span>
+<span id="cb84-549"><a href="#cb84-549"></a><span class="co"># This provides a visual summary of how the number of goals_scored varies from World Cup to World Cup</span></span>
+<span id="cb84-550"><a href="#cb84-550"></a><span class="fu">ggplot</span>(world_cup, <span class="fu">aes</span>(<span class="at">x =</span> goals_scored)) <span class="sc">+</span> </span>
+<span id="cb84-551"><a href="#cb84-551"></a>  <span class="fu">geom_bar</span>()</span>
+<span id="cb84-552"><a href="#cb84-552"></a></span>
+<span id="cb84-553"><a href="#cb84-553"></a><span class="in">```</span></span>
+<span id="cb84-554"><a href="#cb84-554"></a></span>
+<span id="cb84-557"><a href="#cb84-557"></a><span class="in">```{r}</span></span>
+<span id="cb84-558"><a href="#cb84-558"></a><span class="co"># Let's follow up the plot with some more precise numerical summaries</span></span>
+<span id="cb84-559"><a href="#cb84-559"></a><span class="co"># Calculate the min, median, and max number of goals_scored across all World Cups</span></span>
+<span id="cb84-560"><a href="#cb84-560"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: Visually compare these numerical summaries to what you observed in the plot</span></span>
+<span id="cb84-561"><a href="#cb84-561"></a>world_cup <span class="sc">|&gt;</span></span>
+<span id="cb84-562"><a href="#cb84-562"></a>  <span class="fu">summarize</span>(<span class="fu">min</span>(goals_scored), <span class="fu">max</span>(goals_scored), <span class="fu">median</span>(goals_scored))</span>
+<span id="cb84-563"><a href="#cb84-563"></a></span>
+<span id="cb84-564"><a href="#cb84-564"></a><span class="in">```</span></span>
+<span id="cb84-565"><a href="#cb84-565"></a></span>
+<span id="cb84-568"><a href="#cb84-568"></a><span class="in">```{r}</span></span>
+<span id="cb84-569"><a href="#cb84-569"></a><span class="co"># Construct a bivariate plot of how the number of goals_scored in the World Cup has changed over the years</span></span>
+<span id="cb84-570"><a href="#cb84-570"></a><span class="co"># No wrangling necessary</span></span>
+<span id="cb84-571"><a href="#cb84-571"></a><span class="fu">ggplot</span>(world_cup, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> goals_scored)) <span class="sc">+</span></span>
+<span id="cb84-572"><a href="#cb84-572"></a>  <span class="fu">geom_line</span>()</span>
+<span id="cb84-573"><a href="#cb84-573"></a></span>
+<span id="cb84-574"><a href="#cb84-574"></a><span class="in">```</span></span>
+<span id="cb84-575"><a href="#cb84-575"></a></span>
+<span id="cb84-578"><a href="#cb84-578"></a><span class="in">```{r}</span></span>
+<span id="cb84-579"><a href="#cb84-579"></a><span class="co"># Our above summaries might be a bit misleading.</span></span>
+<span id="cb84-580"><a href="#cb84-580"></a><span class="co"># The number of games played at the World Cup varies.</span></span>
+<span id="cb84-581"><a href="#cb84-581"></a><span class="co"># Construct a bivariate plot of how the typical number of goals per game has changed over the years</span></span>
+<span id="cb84-582"><a href="#cb84-582"></a>world_cup <span class="sc">|&gt;</span></span>
+<span id="cb84-583"><a href="#cb84-583"></a>  <span class="fu">mutate</span>(<span class="at">goals_per_game =</span> goals_scored<span class="sc">/</span>games) <span class="sc">|&gt;</span></span>
+<span id="cb84-584"><a href="#cb84-584"></a>  <span class="fu">ggplot</span>( <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> goals_per_game)) <span class="sc">+</span></span>
+<span id="cb84-585"><a href="#cb84-585"></a>  <span class="fu">geom_line</span>()</span>
+<span id="cb84-586"><a href="#cb84-586"></a></span>
+<span id="cb84-587"><a href="#cb84-587"></a><span class="in">```</span></span>
 <span id="cb84-588"><a href="#cb84-588"></a></span>
 <span id="cb84-589"><a href="#cb84-589"></a></span>
-<span id="cb84-590"><a href="#cb84-590"></a><span class="fu">### Exercise 11: Practice on Your Data {-}</span></span>
-<span id="cb84-591"><a href="#cb84-591"></a></span>
-<span id="cb84-592"><a href="#cb84-592"></a>Return to the TidyTuesday data you're using in Homework 3. Use your new wrangling skills to play around. What new insights can you gain?!</span>
-<span id="cb84-593"><a href="#cb84-593"></a></span>
-<span id="cb84-594"><a href="#cb84-594"></a>I was using the water insecurity data, imported below:</span>
-<span id="cb84-597"><a href="#cb84-597"></a><span class="in">```{r}</span></span>
-<span id="cb84-598"><a href="#cb84-598"></a>waterData <span class="ot">&lt;-</span> tidytuesdayR<span class="sc">::</span><span class="fu">tt_load</span>(<span class="st">'2025-01-28'</span>)</span>
-<span id="cb84-599"><a href="#cb84-599"></a><span class="in">```</span></span>
-<span id="cb84-600"><a href="#cb84-600"></a></span>
-<span id="cb84-603"><a href="#cb84-603"></a><span class="in">```{r}</span></span>
-<span id="cb84-604"><a href="#cb84-604"></a><span class="co">#I am interested in finding the total number of people in 2023 who did not have plumbing according to the results collected in the survey.</span></span>
-<span id="cb84-605"><a href="#cb84-605"></a>waterData<span class="sc">$</span>water_insecurity_2023 <span class="sc">|&gt;</span></span>
-<span id="cb84-606"><a href="#cb84-606"></a>  <span class="fu">select</span>(name, total_pop, percent_lacking_plumbing) <span class="sc">|&gt;</span></span>
-<span id="cb84-607"><a href="#cb84-607"></a>  <span class="fu">mutate</span>(<span class="at">number_wo_plumbing =</span> total_pop <span class="sc">*</span> (percent_lacking_plumbing<span class="sc">/</span><span class="dv">100</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb84-608"><a href="#cb84-608"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(number_wo_plumbing))</span>
-<span id="cb84-609"><a href="#cb84-609"></a><span class="in">```</span></span>
-<span id="cb84-610"><a href="#cb84-610"></a></span>
-<span id="cb84-613"><a href="#cb84-613"></a><span class="in">```{r}</span></span>
-<span id="cb84-614"><a href="#cb84-614"></a><span class="co">#One last thing I will try to find is the number of people in Alaska without plumbing in counties that were surveyed</span></span>
-<span id="cb84-615"><a href="#cb84-615"></a>waterData<span class="sc">$</span>water_insecurity_2023 <span class="sc">|&gt;</span></span>
-<span id="cb84-616"><a href="#cb84-616"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(name, <span class="st">"Alaska"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb84-617"><a href="#cb84-617"></a>  <span class="fu">select</span>(name, total_pop, percent_lacking_plumbing) <span class="sc">|&gt;</span></span>
-<span id="cb84-618"><a href="#cb84-618"></a>  <span class="fu">mutate</span>(<span class="at">number_wo_plumbing =</span> total_pop <span class="sc">*</span> (percent_lacking_plumbing<span class="sc">/</span><span class="dv">100</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb84-619"><a href="#cb84-619"></a>  <span class="fu">summarize</span>(<span class="at">AlaskaWoPlumbing =</span> <span class="fu">sum</span>(number_wo_plumbing))</span>
-<span id="cb84-620"><a href="#cb84-620"></a>  </span>
+<span id="cb84-590"><a href="#cb84-590"></a></span>
+<span id="cb84-591"><a href="#cb84-591"></a><span class="fu">### Exercise 11: Practice on Your Data {-}</span></span>
+<span id="cb84-592"><a href="#cb84-592"></a></span>
+<span id="cb84-593"><a href="#cb84-593"></a>Return to the TidyTuesday data you're using in Homework 3. Use your new wrangling skills to play around. What new insights can you gain?!</span>
+<span id="cb84-594"><a href="#cb84-594"></a></span>
+<span id="cb84-595"><a href="#cb84-595"></a>I was using the water insecurity data, imported below:</span>
+<span id="cb84-598"><a href="#cb84-598"></a><span class="in">```{r}</span></span>
+<span id="cb84-599"><a href="#cb84-599"></a>waterData <span class="ot">&lt;-</span> tidytuesdayR<span class="sc">::</span><span class="fu">tt_load</span>(<span class="st">'2025-01-28'</span>)</span>
+<span id="cb84-600"><a href="#cb84-600"></a><span class="in">```</span></span>
+<span id="cb84-601"><a href="#cb84-601"></a></span>
+<span id="cb84-604"><a href="#cb84-604"></a><span class="in">```{r}</span></span>
+<span id="cb84-605"><a href="#cb84-605"></a><span class="co">#I am interested in finding the total number of people in 2023 who did not have plumbing according to the results collected in the survey.</span></span>
+<span id="cb84-606"><a href="#cb84-606"></a>waterData<span class="sc">$</span>water_insecurity_2023 <span class="sc">|&gt;</span></span>
+<span id="cb84-607"><a href="#cb84-607"></a>  <span class="fu">select</span>(name, total_pop, percent_lacking_plumbing) <span class="sc">|&gt;</span></span>
+<span id="cb84-608"><a href="#cb84-608"></a>  <span class="fu">mutate</span>(<span class="at">number_wo_plumbing =</span> total_pop <span class="sc">*</span> (percent_lacking_plumbing<span class="sc">/</span><span class="dv">100</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb84-609"><a href="#cb84-609"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(number_wo_plumbing))</span>
+<span id="cb84-610"><a href="#cb84-610"></a><span class="in">```</span></span>
+<span id="cb84-611"><a href="#cb84-611"></a></span>
+<span id="cb84-614"><a href="#cb84-614"></a><span class="in">```{r}</span></span>
+<span id="cb84-615"><a href="#cb84-615"></a><span class="co">#One last thing I will try to find is the number of people in Alaska without plumbing in counties that were surveyed</span></span>
+<span id="cb84-616"><a href="#cb84-616"></a>waterData<span class="sc">$</span>water_insecurity_2023 <span class="sc">|&gt;</span></span>
+<span id="cb84-617"><a href="#cb84-617"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(name, <span class="st">"Alaska"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb84-618"><a href="#cb84-618"></a>  <span class="fu">select</span>(name, total_pop, percent_lacking_plumbing) <span class="sc">|&gt;</span></span>
+<span id="cb84-619"><a href="#cb84-619"></a>  <span class="fu">mutate</span>(<span class="at">number_wo_plumbing =</span> total_pop <span class="sc">*</span> (percent_lacking_plumbing<span class="sc">/</span><span class="dv">100</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb84-620"><a href="#cb84-620"></a>  <span class="fu">summarize</span>(<span class="at">AlaskaWoPlumbing =</span> <span class="fu">sum</span>(number_wo_plumbing))</span>
 <span id="cb84-621"><a href="#cb84-621"></a>  </span>
-<span id="cb84-622"><a href="#cb84-622"></a><span class="in">```</span></span>
-<span id="cb84-623"><a href="#cb84-623"></a></span>
+<span id="cb84-622"><a href="#cb84-622"></a>  </span>
+<span id="cb84-623"><a href="#cb84-623"></a><span class="in">```</span></span>
 <span id="cb84-624"><a href="#cb84-624"></a></span>
 <span id="cb84-625"><a href="#cb84-625"></a></span>
+<span id="cb84-626"><a href="#cb84-626"></a></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
