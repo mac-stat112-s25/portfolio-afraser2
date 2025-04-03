@@ -1,0 +1,48 @@
+---
+title: "Solo Project: Libraries in Scotland Local Authority Areas"
+format: html
+---
+
+Steps to follow:
+
+1. Natural earth package to find state boundaries or boundaries within a non-US country, or search internet for "__ shapefile" of a specific area of interest.
+
+2. Find dataset that corresponds with country or state that will be used to color within boundaries.
+
+3. Use sf package to draw boundaries in a plot.
+
+4. Construct a chloropleth map of the variable of interest for the data set on the boundaries applied.
+
+
+Shapefile for Scotland local authorities: 
+https://www.spatialdata.gov.scot/geonetwork/srv/api/records/1cd57ea6-8d6e-412b-a9dd-d1c89a80ad62
+(Under API pub-las section, download the shape-zip ZIP file)
+
+CSV file for libraries in Scotland:
+https://data.spatialhub.scot/dataset/libraries-is/resource/570de9e0-999e-4bfd-9ed6-71b09545965e
+(Download button, and select CSV file, only using stationary libraries data and not "mobile libraries" data)
+
+
+```{r load packages}
+library(gplots)
+library(rnaturalearth)
+library(sf)
+library(sfd)
+library(readr)
+```
+
+
+```{r}
+library_data <- read_csv("..Libraries_-_Scotland.csv")
+```
+
+```{r shapefile}
+
+
+```
+
+
+
+
+
+
