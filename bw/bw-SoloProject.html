@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>18&nbsp; Factors – COMP/STAT112 Notebook</title>
+<title>8&nbsp; Solo Project: Libraries in Scotland Local Authority Areas – COMP/STAT112 Notebook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,8 +59,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../ica/ica-strings.html" rel="next">
-<link href="../ica/ica-joining.html" rel="prev">
+<link href="../ica/ica-uni.html" rel="next">
+<link href="../bw/bw-exam2.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -106,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/ica-uni.html">In-class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-factors.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Factors</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bw/bw-uni.html">Best Work</a></li><li class="breadcrumb-item"><a href="../bw/bw-SoloProject.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Solo Project: Libraries in Scotland Local Authority Areas</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -194,7 +194,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../bw/bw-SoloProject.html" class="sidebar-item-text sidebar-link">
+  <a href="../bw/bw-SoloProject.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Solo Project: Libraries in Scotland Local Authority Areas</span></span></a>
   </div>
 </li>
@@ -265,7 +265,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ica/ica-factors.html" class="sidebar-item-text sidebar-link active">
+  <a href="../ica/ica-factors.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Factors</span></span></a>
   </div>
 </li>
@@ -308,19 +308,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li>
-<a href="#exercises" id="toc-exercises" class="nav-link active" data-scroll-target="#exercises"><span class="header-section-number">18.1</span> Exercises</a>
-  <ul class="collapse">
-<li><a href="#exercise-1-changing-order" id="toc-exercise-1-changing-order" class="nav-link" data-scroll-target="#exercise-1-changing-order">Exercise 1: Changing Order</a></li>
-  <li><a href="#exercise-2-changing-factor-level-labels" id="toc-exercise-2-changing-factor-level-labels" class="nav-link" data-scroll-target="#exercise-2-changing-factor-level-labels">Exercise 2: Changing Factor Level Labels</a></li>
-  </ul>
-</li>
+<li><a href="#process-and-setup" id="toc-process-and-setup" class="nav-link active" data-scroll-target="#process-and-setup"><span class="header-section-number">8.1</span> Process and Setup</a></li>
+  <li><a href="#making-the-visualization" id="toc-making-the-visualization" class="nav-link" data-scroll-target="#making-the-visualization"><span class="header-section-number">8.2</span> Making the Visualization</a></li>
+  <li><a href="#short-storysummary-of-visualization" id="toc-short-storysummary-of-visualization" class="nav-link" data-scroll-target="#short-storysummary-of-visualization"><span class="header-section-number">8.3</span> Short Story/Summary of Visualization</a></li>
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources"><span class="header-section-number">8.4</span> Data Sources</a></li>
   </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/ica-uni.html">In-class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-factors.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Factors</span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bw/bw-uni.html">Best Work</a></li><li class="breadcrumb-item"><a href="../bw/bw-SoloProject.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Solo Project: Libraries in Scotland Local Authority Areas</span></a></li></ol></nav><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">
-<span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Factors</span>
+<span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Solo Project: Libraries in Scotland Local Authority Areas</span>
 </h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
@@ -335,131 +332,102 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</header><section id="process-and-setup" class="level2" data-number="8.1"><h2 data-number="8.1" class="anchored" data-anchor-id="process-and-setup">
+<span class="header-section-number">8.1</span> Process and Setup</h2>
+<p>Notes and Steps to follow:</p>
+<ol type="1">
+<li><p>Natural earth package to find state boundaries or boundaries within a non-US country, or search internet for “__ shapefile” of a specific area of interest.</p></li>
+<li><p>Find dataset that corresponds with country or state that will be used to color within boundaries.</p></li>
+<li><p>Use sf package to draw boundaries in a plot.</p></li>
+<li><p>Construct a chloropleth map of the variable of interest for the data set on the boundaries applied.</p></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(gplots)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.1     ✔ tibble    3.2.1
-✔ lubridate 1.9.4     ✔ tidyr     1.3.1
-✔ purrr     1.0.4     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<pre><code>
+Attaching package: 'gplots'</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">library</span>(ggridges)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:stats':
+
+    lowess</code></pre>
 </div>
-<section id="exercises" class="level2" data-number="18.1"><h2 data-number="18.1" class="anchored" data-anchor-id="exercises">
-<span class="header-section-number">18.1</span> Exercises</h2>
-<p>The exercises revisit our <code>grades</code> data:</p>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">library</span>(rnaturalearth)</span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="fu">library</span>(sf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Linking to GEOS 3.13.0, GDAL 3.10.1, PROJ 9.5.1; sf_use_s2() is TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">library</span>(sfd)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: tibble</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">library</span>(forcats)</span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="fu">library</span>(ggthemes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Get rid of some duplicate rows!</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>grades <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/grades.csv"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">distinct</span>(sid, sessionID, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb4-4"><a href="#cb4-4"></a></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="co"># Check it out</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="fu">head</span>(grades)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     sid grade   sessionID
-1 S31185    D+ session1784
-2 S31185    B+ session1785
-3 S31185    A- session1791
-4 S31185    B+ session1792
-5 S31185    B- session1794
-6 S31185    C+ session1795</code></pre>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>library_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"LibrariesScotland.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb13-2"><a href="#cb13-2"></a>boundaries <span class="ot">&lt;-</span> <span class="fu">read_sf</span>(<span class="st">"./scotland/pub_las.shp"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<p>We’ll explore the number of times each grade was assigned:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>grade_distribution <span class="ot">&lt;-</span> grades <span class="sc">|&gt;</span> </span>
-<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">count</span>(grade)</span>
-<span id="cb6-3"><a href="#cb6-3"></a></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="fu">head</span>(grade_distribution)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  grade    n
-1     A 1506
-2    A- 1381
-3    AU   27
-4     B  804
-5    B+ 1003
-6    B-  330</code></pre>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co">#We are interested in the number of libraries in each Local Authority in Scotland, so we will create a count of the number of libraries in each county first</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a>clean_libraries <span class="ot">&lt;-</span> library_data <span class="sc">|&gt;</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a>  <span class="fu">group_by</span>(local_authority) <span class="sc">|&gt;</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a>  <span class="fu">summarize</span>(<span class="at">number_libraries =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a>  <span class="fu">left_join</span>(boundaries, <span class="fu">join_by</span>(local_authority <span class="sc">==</span> local_auth))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<section id="exercise-1-changing-order" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="exercise-1-changing-order">Exercise 1: Changing Order</h3>
-<p>Check out a <strong>column plot</strong> of the number of times each grade was assigned during the study period. This is similar to a bar plot, but where we define the height of a bar according to variable in our dataset.</p>
+</section><section id="making-the-visualization" class="level2" data-number="8.2"><h2 data-number="8.2" class="anchored" data-anchor-id="making-the-visualization">
+<span class="header-section-number">8.2</span> Making the Visualization</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>grade_distribution <span class="sc">|&gt;</span> </span>
-<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a>    <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> clean_libraries,</span>
+<span id="cb15-3"><a href="#cb15-3"></a>          <span class="fu">aes</span>(<span class="at">geometry =</span> geometry,</span>
+<span id="cb15-4"><a href="#cb15-4"></a>              <span class="at">fill =</span> number_libraries),</span>
+<span id="cb15-5"><a href="#cb15-5"></a>              <span class="at">color =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb15-6"><a href="#cb15-6"></a>  <span class="fu">coord_sf</span>(<span class="at">crs =</span> <span class="st">"+proj=merc"</span>) <span class="sc">+</span></span>
+<span id="cb15-7"><a href="#cb15-7"></a>  <span class="fu">theme_map</span>() <span class="sc">+</span></span>
+<span id="cb15-8"><a href="#cb15-8"></a>  <span class="fu">labs</span>(<span class="at">fill =</span> <span class="st">"Number of Libraries"</span>,</span>
+<span id="cb15-9"><a href="#cb15-9"></a>       <span class="at">title =</span> <span class="st">"Number of Libraries in Different Scottish Local Authorities"</span>,</span>
+<span id="cb15-10"><a href="#cb15-10"></a>       <span class="at">subtitle =</span> <span class="st">"Data collected in 2021"</span>,</span>
+<span id="cb15-11"><a href="#cb15-11"></a>       <span class="at">alt =</span> <span class="st">"A chloropleth map that uses color coding of each local authority in Scotland to show how many libraries are in each. There are the darkest colors, indicating the highest number of libraries in northern Scotland (about 40 in two local authorities to the north), with fewer total libraries found on the surrounding islands that make up Scotland. There is a medium density of libraries (about 20) in the furthest south local authority of Scotland."</span>) <span class="sc">+</span></span>
+<span id="cb15-12"><a href="#cb15-12"></a>  <span class="fu">scale_fill_continuous</span>(<span class="at">high =</span> <span class="st">"#132B43"</span>, <span class="at">low =</span> <span class="st">"#56B1F7"</span>) <span class="sc">+</span></span>
+<span id="cb15-13"><a href="#cb15-13"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"right"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="ica-factors_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="bw-SoloProject_files/figure-html/mapping-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>The order of the grades is goofy! Construct a new column plot, manually reordering the grades from high (A) to low (NC) with “S” and “AU” at the end:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_relevel</span>(grade, <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"A-"</span>, <span class="st">"B+"</span>, <span class="st">"B"</span>, <span class="st">"B-"</span>, <span class="st">"C+"</span>, <span class="st">"C"</span>, <span class="st">"C-"</span>, <span class="st">"D+"</span>, <span class="st">"D"</span>, <span class="st">"D-"</span>, <span class="st">"NC"</span>, <span class="st">"S"</span>, <span class="st">"AU"</span>))) <span class="sc">|&gt;</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a>    <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ica-factors_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Construct a new column plot, reordering the grades in ascending frequency (i.e.&nbsp;how often the grades were assigned):</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_reorder</span>(grade, n)) <span class="sc">|&gt;</span></span>
-<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb10-4"><a href="#cb10-4"></a>    <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ica-factors_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Construct a new column plot, reordering the grades in descending frequency (i.e.&nbsp;how often the grades were assigned):</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_reorder</span>(grade, n, <span class="at">.desc =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb11-4"><a href="#cb11-4"></a>    <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ica-factors_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="exercise-2-changing-factor-level-labels" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="exercise-2-changing-factor-level-labels">Exercise 2: Changing Factor Level Labels</h3>
-<p>It may not be clear what “AU” and “S” stand for. Construct a new column plot that renames these levels “Audit” and “Satisfactory”, while keeping the other grade labels the same <em>and</em> in a meaningful order:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_relevel</span>(grade, <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"A-"</span>, <span class="st">"B+"</span>, <span class="st">"B"</span>, <span class="st">"B-"</span>, <span class="st">"C+"</span>, <span class="st">"C"</span>, <span class="st">"C-"</span>, <span class="st">"D+"</span>, <span class="st">"D"</span>, <span class="st">"D-"</span>, <span class="st">"NC"</span>, <span class="st">"S"</span>, <span class="st">"AU"</span>))) <span class="sc">|&gt;</span></span>
-<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_recode</span>(grade, <span class="st">"Audit"</span> <span class="ot">=</span> <span class="st">"AU"</span>, <span class="st">"Satisfactory"</span> <span class="ot">=</span> <span class="st">"S"</span>)) <span class="sc">|&gt;</span>  <span class="co"># Multiple pieces go into the last 2 blanks</span></span>
-<span id="cb12-4"><a href="#cb12-4"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb12-5"><a href="#cb12-5"></a>    <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ica-factors_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
+</section><section id="short-storysummary-of-visualization" class="level2" data-number="8.3"><h2 data-number="8.3" class="anchored" data-anchor-id="short-storysummary-of-visualization">
+<span class="header-section-number">8.3</span> Short Story/Summary of Visualization</h2>
+<p>In the above visualization of the number of libraries in different Scottish local authorities, there are the highest number of libraries in northern Scotland (about 40 in two local authorities to the north), with fewer total libraries found on the surrounding islands that make up Scotland. There is a medium density of libraries (about 20) in the furthest south local authority of Scotland. It is important to note that these counts are just based on sheer numbers of libraries, and not the number of people or area of land in each local authority. Thus, there may be a bias for large local authorities and/or those with large populations to have more libraries. An interesting area for further research would be to divide the number of libraries by the local population of each local authority, and color the map by the per-capita number of libraries in each local authority.</p>
+</section><section id="data-sources" class="level2" data-number="8.4"><h2 data-number="8.4" class="anchored" data-anchor-id="data-sources">
+<span class="header-section-number">8.4</span> Data Sources</h2>
+<p>Library location and number data is from Improvement Service, and boundary data is from Scottish Government published data.</p>
+<p>Shapefile for Scotland local authorities: https://www.spatialdata.gov.scot/geonetwork/srv/api/records/1cd57ea6-8d6e-412b-a9dd-d1c89a80ad62 (Under API pub-las section, download the shape-zip ZIP file)</p>
+<p>CSV file for libraries in Scotland: https://data.spatialhub.scot/dataset/libraries-is/resource/570de9e0-999e-4bfd-9ed6-71b09545965e (Download button, and select CSV file, only using stationary libraries data and not “mobile libraries” data)</p>
 
 
 <!-- -->
 
-</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1079,102 +1047,104 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../ica/ica-joining.html" class="pagination-link" aria-label="Joining">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Joining</span></span>
+      <a href="../bw/bw-exam2.html" class="pagination-link" aria-label="Exam 2: Food Consumption 2">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Exam 2: Food Consumption 2</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../ica/ica-strings.html" class="pagination-link" aria-label="Strings">
-        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Strings</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../ica/ica-uni.html" class="pagination-link" aria-label="Univariate Viz">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Univariate Viz</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb13" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">---</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="an">title:</span><span class="co"> "Factors"</span></span>
-<span id="cb13-3"><a href="#cb13-3"></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a><span class="co">---</span></span>
-<span id="cb13-5"><a href="#cb13-5"></a></span>
-<span id="cb13-8"><a href="#cb13-8"></a><span class="in">```{r}</span></span>
-<span id="cb13-9"><a href="#cb13-9"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb13-10"><a href="#cb13-10"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb13-11"><a href="#cb13-11"></a><span class="fu">library</span>(ggridges)</span>
-<span id="cb13-12"><a href="#cb13-12"></a><span class="in">```</span></span>
-<span id="cb13-13"><a href="#cb13-13"></a></span>
-<span id="cb13-14"><a href="#cb13-14"></a><span class="fu">## Exercises</span></span>
-<span id="cb13-15"><a href="#cb13-15"></a></span>
-<span id="cb13-16"><a href="#cb13-16"></a>The exercises revisit our <span class="in">`grades`</span> data:</span>
-<span id="cb13-17"><a href="#cb13-17"></a></span>
-<span id="cb13-20"><a href="#cb13-20"></a><span class="in">```{r}</span></span>
-<span id="cb13-21"><a href="#cb13-21"></a><span class="co"># Get rid of some duplicate rows!</span></span>
-<span id="cb13-22"><a href="#cb13-22"></a>grades <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/grades.csv"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb13-23"><a href="#cb13-23"></a>  <span class="fu">distinct</span>(sid, sessionID, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb13-24"><a href="#cb13-24"></a></span>
-<span id="cb13-25"><a href="#cb13-25"></a><span class="co"># Check it out</span></span>
-<span id="cb13-26"><a href="#cb13-26"></a><span class="fu">head</span>(grades)</span>
-<span id="cb13-27"><a href="#cb13-27"></a><span class="in">```</span></span>
-<span id="cb13-28"><a href="#cb13-28"></a></span>
-<span id="cb13-29"><a href="#cb13-29"></a>We'll explore the number of times each grade was assigned:</span>
-<span id="cb13-30"><a href="#cb13-30"></a></span>
-<span id="cb13-33"><a href="#cb13-33"></a><span class="in">```{r}</span></span>
-<span id="cb13-34"><a href="#cb13-34"></a>grade_distribution <span class="ot">&lt;-</span> grades <span class="sc">|&gt;</span> </span>
-<span id="cb13-35"><a href="#cb13-35"></a>  <span class="fu">count</span>(grade)</span>
-<span id="cb13-36"><a href="#cb13-36"></a></span>
-<span id="cb13-37"><a href="#cb13-37"></a><span class="fu">head</span>(grade_distribution)</span>
-<span id="cb13-38"><a href="#cb13-38"></a><span class="in">```</span></span>
-<span id="cb13-39"><a href="#cb13-39"></a></span>
-<span id="cb13-40"><a href="#cb13-40"></a><span class="fu">### Exercise 1: Changing Order {.unnumbered}</span></span>
-<span id="cb13-41"><a href="#cb13-41"></a></span>
-<span id="cb13-42"><a href="#cb13-42"></a>Check out a **column plot** of the number of times each grade was assigned during the study period. This is similar to a bar plot, but where we define the height of a bar according to variable in our dataset.</span>
-<span id="cb13-43"><a href="#cb13-43"></a></span>
-<span id="cb13-46"><a href="#cb13-46"></a><span class="in">```{r}</span></span>
-<span id="cb13-47"><a href="#cb13-47"></a>grade_distribution <span class="sc">|&gt;</span> </span>
-<span id="cb13-48"><a href="#cb13-48"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb13-49"><a href="#cb13-49"></a>    <span class="fu">geom_col</span>()</span>
-<span id="cb13-50"><a href="#cb13-50"></a><span class="in">```</span></span>
-<span id="cb13-51"><a href="#cb13-51"></a></span>
-<span id="cb13-52"><a href="#cb13-52"></a>The order of the grades is goofy! Construct a new column plot, manually reordering the grades from high (A) to low (NC) with "S" and "AU" at the end:</span>
-<span id="cb13-53"><a href="#cb13-53"></a></span>
-<span id="cb13-56"><a href="#cb13-56"></a><span class="in">```{r}</span></span>
-<span id="cb13-57"><a href="#cb13-57"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb13-58"><a href="#cb13-58"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_relevel</span>(grade, <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"A-"</span>, <span class="st">"B+"</span>, <span class="st">"B"</span>, <span class="st">"B-"</span>, <span class="st">"C+"</span>, <span class="st">"C"</span>, <span class="st">"C-"</span>, <span class="st">"D+"</span>, <span class="st">"D"</span>, <span class="st">"D-"</span>, <span class="st">"NC"</span>, <span class="st">"S"</span>, <span class="st">"AU"</span>))) <span class="sc">|&gt;</span></span>
-<span id="cb13-59"><a href="#cb13-59"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb13-60"><a href="#cb13-60"></a>    <span class="fu">geom_col</span>()</span>
-<span id="cb13-61"><a href="#cb13-61"></a><span class="in">```</span></span>
-<span id="cb13-62"><a href="#cb13-62"></a></span>
-<span id="cb13-63"><a href="#cb13-63"></a>Construct a new column plot, reordering the grades in ascending frequency (i.e. how often the grades were assigned):</span>
-<span id="cb13-64"><a href="#cb13-64"></a></span>
-<span id="cb13-67"><a href="#cb13-67"></a><span class="in">```{r}</span></span>
-<span id="cb13-68"><a href="#cb13-68"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb13-69"><a href="#cb13-69"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_reorder</span>(grade, n)) <span class="sc">|&gt;</span></span>
-<span id="cb13-70"><a href="#cb13-70"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb13-71"><a href="#cb13-71"></a>    <span class="fu">geom_col</span>()</span>
-<span id="cb13-72"><a href="#cb13-72"></a><span class="in">```</span></span>
-<span id="cb13-73"><a href="#cb13-73"></a></span>
-<span id="cb13-74"><a href="#cb13-74"></a>Construct a new column plot, reordering the grades in descending frequency (i.e. how often the grades were assigned):</span>
-<span id="cb13-75"><a href="#cb13-75"></a></span>
-<span id="cb13-78"><a href="#cb13-78"></a><span class="in">```{r}</span></span>
-<span id="cb13-79"><a href="#cb13-79"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb13-80"><a href="#cb13-80"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_reorder</span>(grade, n, <span class="at">.desc =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb13-81"><a href="#cb13-81"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb13-82"><a href="#cb13-82"></a>    <span class="fu">geom_col</span>()</span>
-<span id="cb13-83"><a href="#cb13-83"></a><span class="in">```</span></span>
-<span id="cb13-84"><a href="#cb13-84"></a></span>
-<span id="cb13-85"><a href="#cb13-85"></a></span>
-<span id="cb13-86"><a href="#cb13-86"></a></span>
-<span id="cb13-87"><a href="#cb13-87"></a><span class="fu">### Exercise 2: Changing Factor Level Labels {.unnumbered}</span></span>
-<span id="cb13-88"><a href="#cb13-88"></a></span>
-<span id="cb13-89"><a href="#cb13-89"></a>It may not be clear what "AU" and "S" stand for. Construct a new column plot that renames these levels "Audit" and "Satisfactory", while keeping the other grade labels the same *and* in a meaningful order:</span>
-<span id="cb13-90"><a href="#cb13-90"></a></span>
-<span id="cb13-93"><a href="#cb13-93"></a><span class="in">```{r}</span></span>
-<span id="cb13-94"><a href="#cb13-94"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb13-95"><a href="#cb13-95"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_relevel</span>(grade, <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"A-"</span>, <span class="st">"B+"</span>, <span class="st">"B"</span>, <span class="st">"B-"</span>, <span class="st">"C+"</span>, <span class="st">"C"</span>, <span class="st">"C-"</span>, <span class="st">"D+"</span>, <span class="st">"D"</span>, <span class="st">"D-"</span>, <span class="st">"NC"</span>, <span class="st">"S"</span>, <span class="st">"AU"</span>))) <span class="sc">|&gt;</span></span>
-<span id="cb13-96"><a href="#cb13-96"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_recode</span>(grade, <span class="st">"Audit"</span> <span class="ot">=</span> <span class="st">"AU"</span>, <span class="st">"Satisfactory"</span> <span class="ot">=</span> <span class="st">"S"</span>)) <span class="sc">|&gt;</span>  <span class="co"># Multiple pieces go into the last 2 blanks</span></span>
-<span id="cb13-97"><a href="#cb13-97"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb13-98"><a href="#cb13-98"></a>    <span class="fu">geom_col</span>()</span>
-<span id="cb13-99"><a href="#cb13-99"></a><span class="in">```</span></span>
-<span id="cb13-100"><a href="#cb13-100"></a></span>
-<span id="cb13-101"><a href="#cb13-101"></a></span>
-</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1"></a><span class="co">---</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="an">title:</span><span class="co"> "Solo Project: Libraries in Scotland Local Authority Areas"</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb16-4"><a href="#cb16-4"></a><span class="co">---</span></span>
+<span id="cb16-5"><a href="#cb16-5"></a></span>
+<span id="cb16-6"><a href="#cb16-6"></a><span class="fu">## Process and Setup</span></span>
+<span id="cb16-7"><a href="#cb16-7"></a></span>
+<span id="cb16-8"><a href="#cb16-8"></a>Notes and Steps to follow:</span>
+<span id="cb16-9"><a href="#cb16-9"></a></span>
+<span id="cb16-10"><a href="#cb16-10"></a><span class="ss">1. </span>Natural earth package to find state boundaries or boundaries within a non-US country, or search internet for "__ shapefile" of a specific area of interest.</span>
+<span id="cb16-11"><a href="#cb16-11"></a></span>
+<span id="cb16-12"><a href="#cb16-12"></a><span class="ss">2. </span>Find dataset that corresponds with country or state that will be used to color within boundaries.</span>
+<span id="cb16-13"><a href="#cb16-13"></a></span>
+<span id="cb16-14"><a href="#cb16-14"></a><span class="ss">3. </span>Use sf package to draw boundaries in a plot.</span>
+<span id="cb16-15"><a href="#cb16-15"></a></span>
+<span id="cb16-16"><a href="#cb16-16"></a><span class="ss">4. </span>Construct a chloropleth map of the variable of interest for the data set on the boundaries applied.</span>
+<span id="cb16-17"><a href="#cb16-17"></a></span>
+<span id="cb16-18"><a href="#cb16-18"></a></span>
+<span id="cb16-19"><a href="#cb16-19"></a><span class="in">```{r load packages}</span></span>
+<span id="cb16-20"><a href="#cb16-20"></a><span class="in">library(gplots)</span></span>
+<span id="cb16-21"><a href="#cb16-21"></a><span class="in">library(ggplot2)</span></span>
+<span id="cb16-22"><a href="#cb16-22"></a><span class="in">library(rnaturalearth)</span></span>
+<span id="cb16-23"><a href="#cb16-23"></a><span class="in">library(sf)</span></span>
+<span id="cb16-24"><a href="#cb16-24"></a><span class="in">library(sfd)</span></span>
+<span id="cb16-25"><a href="#cb16-25"></a><span class="in">library(readr)</span></span>
+<span id="cb16-26"><a href="#cb16-26"></a><span class="in">library(dplyr)</span></span>
+<span id="cb16-27"><a href="#cb16-27"></a><span class="in">library(forcats)</span></span>
+<span id="cb16-28"><a href="#cb16-28"></a><span class="in">library(ggthemes)</span></span>
+<span id="cb16-29"><a href="#cb16-29"></a><span class="in">```</span></span>
+<span id="cb16-30"><a href="#cb16-30"></a></span>
+<span id="cb16-31"><a href="#cb16-31"></a></span>
+<span id="cb16-32"><a href="#cb16-32"></a><span class="in">```{r loading data}</span></span>
+<span id="cb16-33"><a href="#cb16-33"></a><span class="in">library_data &lt;- read_csv("LibrariesScotland.csv", show_col_types = FALSE)</span></span>
+<span id="cb16-34"><a href="#cb16-34"></a><span class="in">boundaries &lt;- read_sf("./scotland/pub_las.shp")</span></span>
+<span id="cb16-35"><a href="#cb16-35"></a><span class="in">```</span></span>
+<span id="cb16-36"><a href="#cb16-36"></a></span>
+<span id="cb16-37"><a href="#cb16-37"></a><span class="in">```{r cleaning data}</span></span>
+<span id="cb16-38"><a href="#cb16-38"></a><span class="in">#We are interested in the number of libraries in each Local Authority in Scotland, so we will create a count of the number of libraries in each county first</span></span>
+<span id="cb16-39"><a href="#cb16-39"></a><span class="in">clean_libraries &lt;- library_data |&gt;</span></span>
+<span id="cb16-40"><a href="#cb16-40"></a><span class="in">  group_by(local_authority) |&gt;</span></span>
+<span id="cb16-41"><a href="#cb16-41"></a><span class="in">  summarize(number_libraries = n()) |&gt;</span></span>
+<span id="cb16-42"><a href="#cb16-42"></a><span class="in">  left_join(boundaries, join_by(local_authority == local_auth))</span></span>
+<span id="cb16-43"><a href="#cb16-43"></a></span>
+<span id="cb16-44"><a href="#cb16-44"></a></span>
+<span id="cb16-45"><a href="#cb16-45"></a><span class="in">```</span></span>
+<span id="cb16-46"><a href="#cb16-46"></a></span>
+<span id="cb16-47"><a href="#cb16-47"></a></span>
+<span id="cb16-48"><a href="#cb16-48"></a><span class="fu">## Making the Visualization</span></span>
+<span id="cb16-49"><a href="#cb16-49"></a></span>
+<span id="cb16-50"><a href="#cb16-50"></a><span class="in">```{r mapping, fig.height = 6}</span></span>
+<span id="cb16-51"><a href="#cb16-51"></a><span class="in">ggplot() +</span></span>
+<span id="cb16-52"><a href="#cb16-52"></a><span class="in">  geom_sf(data = clean_libraries,</span></span>
+<span id="cb16-53"><a href="#cb16-53"></a><span class="in">          aes(geometry = geometry,</span></span>
+<span id="cb16-54"><a href="#cb16-54"></a><span class="in">              fill = number_libraries),</span></span>
+<span id="cb16-55"><a href="#cb16-55"></a><span class="in">              color = NA) +</span></span>
+<span id="cb16-56"><a href="#cb16-56"></a><span class="in">  coord_sf(crs = "+proj=merc") +</span></span>
+<span id="cb16-57"><a href="#cb16-57"></a><span class="in">  theme_map() +</span></span>
+<span id="cb16-58"><a href="#cb16-58"></a><span class="in">  labs(fill = "Number of Libraries",</span></span>
+<span id="cb16-59"><a href="#cb16-59"></a><span class="in">       title = "Number of Libraries in Different Scottish Local Authorities",</span></span>
+<span id="cb16-60"><a href="#cb16-60"></a><span class="in">       subtitle = "Data collected in 2021",</span></span>
+<span id="cb16-61"><a href="#cb16-61"></a><span class="in">       alt = "A chloropleth map that uses color coding of each local authority in Scotland to show how many libraries are in each. There are the darkest colors, indicating the highest number of libraries in northern Scotland (about 40 in two local authorities to the north), with fewer total libraries found on the surrounding islands that make up Scotland. There is a medium density of libraries (about 20) in the furthest south local authority of Scotland.") +</span></span>
+<span id="cb16-62"><a href="#cb16-62"></a><span class="in">  scale_fill_continuous(high = "#132B43", low = "#56B1F7") +</span></span>
+<span id="cb16-63"><a href="#cb16-63"></a><span class="in">  theme(legend.position="right")</span></span>
+<span id="cb16-64"><a href="#cb16-64"></a></span>
+<span id="cb16-65"><a href="#cb16-65"></a><span class="in">```</span></span>
+<span id="cb16-66"><a href="#cb16-66"></a></span>
+<span id="cb16-67"><a href="#cb16-67"></a></span>
+<span id="cb16-68"><a href="#cb16-68"></a></span>
+<span id="cb16-69"><a href="#cb16-69"></a><span class="fu">## Short Story/Summary of Visualization</span></span>
+<span id="cb16-70"><a href="#cb16-70"></a></span>
+<span id="cb16-71"><a href="#cb16-71"></a>In the above visualization of the number of libraries in different Scottish local authorities, there are the highest number of libraries in northern Scotland (about 40 in two local authorities to the north), with fewer total libraries found on the surrounding islands that make up Scotland. There is a medium density of libraries (about 20) in the furthest south local authority of Scotland. It is important to note that these counts are just based on sheer numbers of libraries, and not the number of people or area of land in each local authority. Thus, there may be a bias for large local authorities and/or those with large populations to have more libraries. An interesting area for further research would be to divide the number of libraries by the local population of each local authority, and color the map by the per-capita number of libraries in each local authority.</span>
+<span id="cb16-72"><a href="#cb16-72"></a></span>
+<span id="cb16-73"><a href="#cb16-73"></a><span class="fu">## Data Sources</span></span>
+<span id="cb16-74"><a href="#cb16-74"></a></span>
+<span id="cb16-75"><a href="#cb16-75"></a>Library location and number data is from Improvement Service, and boundary data is from Scottish Government published data.</span>
+<span id="cb16-76"><a href="#cb16-76"></a></span>
+<span id="cb16-77"><a href="#cb16-77"></a>Shapefile for Scotland local authorities: </span>
+<span id="cb16-78"><a href="#cb16-78"></a>https://www.spatialdata.gov.scot/geonetwork/srv/api/records/1cd57ea6-8d6e-412b-a9dd-d1c89a80ad62</span>
+<span id="cb16-79"><a href="#cb16-79"></a>(Under API pub-las section, download the shape-zip ZIP file)</span>
+<span id="cb16-80"><a href="#cb16-80"></a></span>
+<span id="cb16-81"><a href="#cb16-81"></a>CSV file for libraries in Scotland:</span>
+<span id="cb16-82"><a href="#cb16-82"></a>https://data.spatialhub.scot/dataset/libraries-is/resource/570de9e0-999e-4bfd-9ed6-71b09545965e</span>
+<span id="cb16-83"><a href="#cb16-83"></a>(Download button, and select CSV file, only using stationary libraries data and not "mobile libraries" data)</span>
+<span id="cb16-84"><a href="#cb16-84"></a></span>
+<span id="cb16-85"><a href="#cb16-85"></a></span>
+<span id="cb16-86"><a href="#cb16-86"></a></span>
+<span id="cb16-87"><a href="#cb16-87"></a></span>
+<span id="cb16-88"><a href="#cb16-88"></a></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
