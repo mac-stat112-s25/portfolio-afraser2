@@ -573,23 +573,23 @@
   {
     "objectID": "bw/bw-exam1-cheatsheet.html",
     "href": "bw/bw-exam1-cheatsheet.html",
-    "title": "\n21  Exam 1 Summary Sheet\n",
+    "title": "\n21  Visualization\n",
     "section": "",
     "text": "library(grid)\n\nimg &lt;- png::readPNG(\"../exam1cheatsheet.png\")\ngrid.raster(img, height = unit(1, \"npc\"))\n\n\n\n\n\n\n\nAbove is my cheatsheet summary of visualizations from all visualization units in this class.",
     "crumbs": [
       "Summaries",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Exam 1 Summary Sheet</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Visualization</span>"
     ]
   },
   {
     "objectID": "bw/bw-exam2-cheatsheet.html",
     "href": "bw/bw-exam2-cheatsheet.html",
-    "title": "\n22  Exam 2 Summary Sheet\n",
+    "title": "\n22  Wrangling\n",
     "section": "",
     "text": "library(grid)\n\nimg &lt;- png::readPNG(\"../exam2cheatsheet.png\")\ngrid.raster(img, height = unit(1, \"npc\"))\n\n\n\n\n\n\n\nAbove is my cheatsheet summary of visualizations from all units for exam 2 in this class.",
     "crumbs": [
       "Summaries",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Exam 2 Summary Sheet</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Wrangling</span>"
     ]
   }
 ]
