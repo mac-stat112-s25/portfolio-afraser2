@@ -52,6 +52,7 @@ book:
     - part: "Summaries"
       chapters: 
         - bw/bw-exam1-cheatsheet.qmd
+        - bw/bw-exam2-cheatsheet.qmd
      
 
 format:
