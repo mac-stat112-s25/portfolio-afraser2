@@ -2,4 +2,32 @@
 title: "Bivariate Viz"
 ---
 
-Use this file to generate a professional looking **bivariate** visualization.  The visualization will not perfect the first time but you are expected to improve it throughout the semester especially after covering advanced topics such as effective viz.
+```{r}
+# Loading packages and data into R
+
+library(ggplot2)
+library(viridisLite)
+library(viridis)
+
+elections <- read.csv("https://mac-stat.github.io/data/election_2020_county.csv")
+
+```
+
+
+
+```{r}
+# Code to create the bar graph for the visualization
+
+ggplot(elections, aes(x = historical, fill = winner_20)) +
+  geom_bar(position = "fill") +
+  labs(title = "County Votes in 2020 compared to Historical Trends", 
+       subtitle = "Compare the outcomes by county for the 2020 US Presidential election with their historical leanings",
+       x = "Historical Voting Pattern",
+       y = "Proportion of 2020 outcome",
+       alt = "A filled bar graph titled 'County votes in 2020 compared to historical trends' showing the proportion of counties that voted Republican and democrat, with different bars for the historical preference of each county, labelled blue, purple, or red. A trend appears that 0nly 67.5 percent of historical blue counties voted republican in 2020, while 80 percent of historically purple counties woted republican, and over 90 percent of historically republican counties also voted Republican in the 2020 election.",
+       fill = "Democratic or Republican in 2020") +
+  scale_fill_viridis(discrete = TRUE)
+
+```
+
+I chose to use my presidential election in 2020 versus historically bar graph for my best work for bivariate visualization. I added more accessible colors using the viridis addon, and although it may seem less intuitive, the yellow and purple are higher contrast and more accessible for color-blind readers of the chart. The well-labelled legend helps interpret and overcome any confusion caused by the colors, and the non-intuitive colors are okay as otherwise the visualization is pretty simple. I think the filled bars are effective visualization because they show the proportions, which we are interested in, rather than distracting us with the exact number of counties that voted a given way. It allows the data to be easily comparable across categories.

@@ -1,0 +1,17 @@
+---
+title: "Visualization"
+format: html
+---
+
+```{r, fig.height = 9}
+library(grid)
+
+img <- png::readPNG("../exam1cheatsheet.png")
+grid.raster(img, height = unit(1, "npc"))
+```
+
+
+Above is my cheatsheet summary of visualizations from all visualization units in this class.
+
+
+
