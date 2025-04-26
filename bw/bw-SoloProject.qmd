@@ -1,9 +1,10 @@
 ---
-title: "Solo Project: Libraries in Scotland Local Authority Areas"
+title: "Solo Project"
 format: html
 ---
 
 ## Process and Setup
+Below is the process and visualization for my solo data science project, visualizing the number of libraries in each Scotland Local Authority area in a chloropleth map.
 
 Notes and Steps to follow:
 
@@ -52,7 +53,9 @@ ggplot() +
   geom_sf(data = clean_libraries,
           aes(geometry = geometry,
               fill = number_libraries),
-              color = NA) +
+              color = "white",
+              lwd = .01
+          ) +
   coord_sf(crs = "+proj=merc") +
   theme_map() +
   labs(fill = "Number of Libraries",

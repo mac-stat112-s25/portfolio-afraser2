@@ -1,5 +1,5 @@
 ---
-title: "Exam 1 Visualization Process"
+title: "Exam 1"
 format: html
 ---
 

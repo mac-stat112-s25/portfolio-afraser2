@@ -1,5 +1,5 @@
 ---
-title: "Quadvariate (Multivariate) Viz"
+title: "Multivariate Viz"
 ---
 
 ```{r}
@@ -35,7 +35,8 @@ heatmap.2(plot_data,
   colsep = c(1:7), rowsep = (1:50), sepwidth = c(0.05, 0.05),
   sepcolor = "white", trace = "none",
   main = "SAT data heatmap in 1994-95",
-  alt = "A heatmap titled 'SAT data heatmap in 1995-95' which lists the states along the x-axis and 'frac, fracCat, expend, salary, ratio, verbal, sat, and math' as variables along the x axis. The colors represent the Z-score of each variable for each state. Particular areas with high Z scores are the expenditure variable for New York and New Jersey, and the ratio variable for Utah and Californa."
+  alt = "A heatmap titled 'SAT data heatmap in 1995-95' which lists the states along the x-axis and 'frac, fracCat, expend, salary, ratio, verbal, sat, and math' as variables along the x axis. The colors represent the Z-score of each variable for each state. Particular areas with high Z scores are the expenditure variable for New York and New Jersey, and the ratio variable for Utah and Californa.",
+  caption = "This data comes from the SAT dataset originally published in the Journal of Statistics Education by Deborah Lynn Guber. It shows state-by-state statistics for a number of SAT parameters and school spending."
 )
 ```
 

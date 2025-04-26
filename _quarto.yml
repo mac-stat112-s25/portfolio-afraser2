@@ -34,6 +34,11 @@ book:
       - bw/bw-exam2.qmd
       - bw/bw-SoloProject.qmd
 
+    - part: "Summaries"
+      chapters: 
+        - bw/bw-exam1-cheatsheet.qmd
+        - bw/bw-exam2-cheatsheet.qmd
+        
     - part: "In-class Activities"
       chapters: 
       - ica/ica-uni.qmd
@@ -48,11 +53,6 @@ book:
       - ica/ica-factors.qmd
       - ica/ica-strings.qmd
       - ica/quarto-demo.qmd
-
-    - part: "Summaries"
-      chapters: 
-        - bw/bw-exam1-cheatsheet.qmd
-        - bw/bw-exam2-cheatsheet.qmd
      
 
 format:
