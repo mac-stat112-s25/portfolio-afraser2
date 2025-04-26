@@ -1,0 +1,92 @@
+---
+title: "Solo Project"
+format: html
+---
+
+## Process and Setup
+Below is the process and visualization for my solo data science project, visualizing the number of libraries in each Scotland Local Authority area in a chloropleth map.
+
+Notes and Steps to follow:
+
+1. Natural earth package to find state boundaries or boundaries within a non-US country, or search internet for "__ shapefile" of a specific area of interest.
+
+2. Find dataset that corresponds with country or state that will be used to color within boundaries.
+
+3. Use sf package to draw boundaries in a plot.
+
+4. Construct a chloropleth map of the variable of interest for the data set on the boundaries applied.
+
+
+```{r load packages}
+library(gplots)
+library(ggplot2)
+library(rnaturalearth)
+library(sf)
+library(sfd)
+library(readr)
+library(dplyr)
+library(forcats)
+library(ggthemes)
+```
+
+
+```{r loading data}
+library_data <- read_csv("LibrariesScotland.csv", show_col_types = FALSE)
+boundaries <- read_sf("./scotland/pub_las.shp")
+```
+
+```{r cleaning data}
+#We are interested in the number of libraries in each Local Authority in Scotland, so we will create a count of the number of libraries in each county first
+clean_libraries <- library_data |>
+  group_by(local_authority) |>
+  summarize(number_libraries = n()) |>
+  left_join(boundaries, join_by(local_authority == local_auth))
+
+
+```
+
+
+## Making the Visualization
+
+```{r mapping, fig.height = 6}
+ggplot() +
+  geom_sf(data = clean_libraries,
+          aes(geometry = geometry,
+              fill = number_libraries),
+              color = "white",
+              lwd = .01
+          ) +
+  coord_sf(crs = "+proj=merc") +
+  theme_map() +
+  labs(fill = "Number of Libraries",
+       title = "Number of Libraries in Different Scottish Local Authorities",
+       subtitle = "Data collected in 2021",
+       alt = "A chloropleth map that uses color coding of each local authority in Scotland to show how many libraries are in each. There are the darkest colors, indicating the highest number of libraries in northern Scotland (about 40 in two local authorities to the north), with fewer total libraries found on the surrounding islands that make up Scotland. There is a medium density of libraries (about 20) in the furthest south local authority of Scotland.") +
+  scale_fill_continuous(high = "#132B43", low = "#56B1F7") +
+  theme(legend.position="right")
+
+```
+
+
+
+## Short Story/Summary of Visualization
+
+In the above visualization of the number of libraries in different Scottish local authorities, there are the highest number of libraries in northern Scotland (about 40 in two local authorities to the north), with fewer total libraries found on the surrounding islands that make up Scotland. There is a medium density of libraries (about 20) in the furthest south local authority of Scotland. It is important to note that these counts are just based on sheer numbers of libraries, and not the number of people or area of land in each local authority. Thus, there may be a bias for large local authorities and/or those with large populations to have more libraries. An interesting area for further research would be to divide the number of libraries by the local population of each local authority, and color the map by the per-capita number of libraries in each local authority.
+
+## Data Sources
+
+Library location and number data is from Improvement Service, and boundary data is from Scottish Government published data.
+
+Shapefile for Scotland local authorities: 
+https://www.spatialdata.gov.scot/geonetwork/srv/api/records/1cd57ea6-8d6e-412b-a9dd-d1c89a80ad62
+(Under API pub-las section, download the shape-zip ZIP file)
+
+CSV file for libraries in Scotland:
+https://data.spatialhub.scot/dataset/libraries-is/resource/570de9e0-999e-4bfd-9ed6-71b09545965e
+(Download button, and select CSV file, only using stationary libraries data and not "mobile libraries" data)
+
+
+
+
+
+

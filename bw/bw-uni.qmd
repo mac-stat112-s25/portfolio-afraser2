@@ -2,4 +2,23 @@
 title: "Univariate Viz"
 ---
 
-Use this file to generate a professional looking **univariate** visualization. The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.
+```{r}
+# Load packages and data into R
+library(ggplot2)
+hikes <- read.csv("https://mac-stat.github.io/data/high_peaks.csv")
+```
+
+```{r}
+# Creating the visualization
+
+ggplot(hikes, aes(x = elevation)) +
+  geom_density(color = "black") +
+  geom_density(fill = "black") +
+  labs(title = "Elevation Distribution of Hikes in the Adirondack mountains", 
+       subtitle = "From data on 46 hikes in the Adirondack mountains published by Adirondack.net",
+       x = "Elevation at Peak",
+       y = "Proportion of Hikes",
+       alt = "A density plot titled 'Elevation distribution of hikes in the adirondack mountains' of numerical data from 46 hikes in the Adirondack mountains showing the relative occurrences of elevation hikes at the peaks. There is a trend that the data is right skewed, and seems that the most common elevation was about 4200 feet.")
+```
+
+I have chosen to show a density plot of the elevations of 46 hikes in the Adirondack mountains as my effective visualization for a univariate graph. What is effective is determined by what we want to show, and I think this graph does a good job help people understand the general trends and range of hike elevations in the Adirondack mountains. It was important to me to include the size of the data set in the caption of the image so that people have an idea of the sample size, despite the arbitrarily numbered y axis. In terms of accessible visualization, I modified the graph so that it is very high contrast, with the trend line and shape being shown in bold black against a pale background.

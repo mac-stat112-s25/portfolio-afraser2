@@ -2,4 +2,28 @@
 title: "Trivariate Viz"
 ---
 
-Use this file to generate a professional looking **trivariate** visualization.  The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.
+```{r}
+# Import data
+education <- read.csv("https://mac-stat.github.io/data/sat.csv")
+
+# Load packages and data into R
+library(ggplot2)
+library(viridis)
+library(viridisLite)
+
+```
+
+```{r}
+ggplot(education, aes(x = expend, y = sat, color = fracCat)) +
+  geom_point() +
+  geom_smooth(se = FALSE, method = "lm") +
+  labs(title = "1995 SAT scores compared with state education exenditure per pupil", 
+       subtitle = "Subcategory trend lines showing the fraction of eligible students per state who took the SAT",
+       x = "Average States Education Expenditure per Pupil (Thousands USD)",
+       y = "SAT Score",
+       color = "Percent Participation",
+       alt = "A scatterplot with trend lines for three separate categories. The chart is titled '1995 SAT scores compared with state education expenditure per pupil' and shows SAT score on the Y axis and the average state expenditure per pupil on the x axis. A third variable, the fraction is shown by colors and trend lines, with categories of states in which 0 to 15, 15 to 45, and 45 to 100 percent of eligible students took the SAT. Generally, states in which lower percentages of students to the SAT had higher average scores, but within each category, the SAT scores went up slightly with higher per pupil education expenditure.") +
+  scale_color_manual(values = c("#648FFF", "#DC267F", "#FFB000"))
+
+```
+For my trivariate visualization, I have chosen this as it effectively utilizes trend lines within categories of a third variable (the fraction of students in a state that took the SAT) to displace some conclusions that might otherwise be drawn by merely viewing the points on the graph. We can see that within states where similar proportions of students took the SAT as each other, there is a general trend that the higher the state expenditure per pupil, the higher the SAT scores. The color palette that I used involves colors from the IBM accessible color palette. The viridis default was very low contrast with three values, and was giving a bright yellow color which was very difficult to see on the grey background. Due to adding my own manual values, I have a high contrast, appropriate, and accessible visualization.

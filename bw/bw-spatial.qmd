@@ -2,4 +2,49 @@
 title: "Spatial Viz"
 ---
 
-Use this file to generate a professional looking **spatial** visualization.  The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.
+
+```{r}
+
+# Load packages
+library(mosaic)
+library(rnaturalearth)
+library(tidyverse)
+
+# Import starbucks location data
+starbucks <- read.csv("https://mac-stat.github.io/data/starbucks.csv")
+
+# Get info about country boundaries across the world
+# in a "sf" or simple feature format
+world_boundaries <- ne_countries(returnclass = "sf")
+```
+
+
+```{r}
+
+starbucks_cma <- starbucks |> 
+  filter(Country %in% c('CA', 'MX', 'US'))
+
+cma_boundaries <- ne_states(
+  country = c("canada", "mexico", "united states of america"),
+  returnclass = "sf")
+
+# Add the points
+# And zoom in
+ggplot(cma_boundaries) + 
+  geom_sf() + 
+  geom_point(
+    data = starbucks_cma,
+    aes(x = Longitude, y = Latitude),
+    alpha = 0.3,
+    size = 0.2,
+    color = "darkgreen"
+  ) +
+  coord_sf(xlim = c(-179.14, -50)) +
+  theme_map() +
+  labs(title = "Map of Starbucks Locations in North America",
+       subtitle = "Each green dot represents one Starbucks location",
+       alt = "A line map titled 'Map of Starbucks Locations in North America' of the United States, Canada, and Mexico, with green dots across it, each representing a Starbucks location. There is a concentration of Starbucks on the east coast of the US, as well as several clusters along the west coast. Ther is a correlation between the locations of major cities in the US and Starbucks location clusters on the map. There are the most Starbucks in the US, with generally lower densities in Mexico and Canada.")
+
+```
+
+This is an effective, high-contrast visualization that is at the correct scale size to help viewers see trends in the number of Starbucks across areas of North America. If we wanted to know where a specific Starbucks was, we would need a different, more close-up map, but this map helps see trends such as many Starbucks being on the east coast and in California, and how many Starbucks locations align with the location of major cities in the US (based on an understanding of US geography and city locations. Regardless of prior knowledge, this graph would let people know where the most Starbucks are, as well as identify general areas where there are fewer Starbucks.
